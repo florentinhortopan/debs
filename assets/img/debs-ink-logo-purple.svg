@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Adjustable brand color -->
+  <defs>
+    <style>
+      .ink { fill: #7C3AED; } /* Purple */
+    </style>
+    <!-- Feather vein mask to cut a slim highlight out of the feather -->
+    <mask id="vein-cut">
+      <rect width="512" height="512" fill="white"/>
+      <!-- Vein path (black removes from mask) -->
+      <path d="M318 94 C 312 160, 292 210, 262 246 C 250 260, 236 272, 222 282 C 214 288, 206 293, 198 297
+               C 204 286, 209 274, 214 262 C 234 214, 255 146, 260 92
+               C 276 86, 299 86, 318 94 Z"
+            fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Group for the full mark -->
+  <g>
+    <!-- Lowercase 'd' base: bowl + stem -->
+    <path class="ink" d="
+        M160,330
+        a70,70 0 1,0 140,0
+        a70,70 0 1,0 -140,0
+        Z
+        M230,180
+        h40
+        v230
+        h-40
+        Z" />
+
+    <!-- Feather built from the ascender of the 'd' -->
+    <path class="ink" mask="url(#vein-cut)" d="
+        M250,180
+        C 285,120 332,90 380,86
+        C 404,84 430,92 444,110
+        C 460,130 454,154 442,176
+        C 426,206 396,236 360,258
+        C 336,272 312,284 286,292
+        L 250,304 Z
+
+        M346,210
+        C 360,194 370,176 377,160
+        C 349,170 324,188 305,208 Z
+
+        M320,250
+        C 335,240 349,230 360,218
+        C 338,224 319,235 303,246 Z" />
+  </g>
+</svg>

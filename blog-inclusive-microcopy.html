@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Debs.ink | Content Design Blog - Building Inclusive Microcopy for Diverse User Bases</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how to create inclusive microcopy that serves diverse user bases. Discover content design strategies for accessibility, cultural sensitivity, and universal user experience.">
+    <meta name="keywords" content="inclusive microcopy, content design, accessibility, diverse users, UX writing, cultural sensitivity, universal design, content strategy, user experience, inclusive design">
+    <meta name="author" content="Debora Barbato">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Debs.ink | Building Inclusive Microcopy for Diverse User Bases">
+    <meta property="og:description" content="Learn how to create inclusive microcopy that serves diverse user bases. Discover content design strategies for accessibility, cultural sensitivity, and universal user experience.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://debs.ink/blog-inclusive-microcopy">
+    <meta property="og:image" content="https://debs.ink/assets/img/blog/single/cover-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Debs.ink | Inclusive Microcopy">
+    <meta name="twitter:description" content="Learn how to create inclusive microcopy that serves diverse user bases.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+
+  </head>
+
+
+  <!-- Body -->
+  <body>
+    
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+            Debs.ink
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Impact</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Contacts</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="contacts-v1.html" class="btn btn-primary w-100">
+                <i class="bx bx-envelope fs-4 lh-1 me-1"></i>
+                &nbsp;Get in Touch
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="contacts-v1.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+            <i class="bx bx-envelope fs-5 lh-1 me-1"></i>
+            &nbsp;Contact Me
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Breadcrumb -->
+      <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="blog-list-with-sidebar.html">Blog</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Inclusive Microcopy</li>
+        </ol> 
+      </nav>
+
+
+      <!-- Post title + Meta  -->
+      <section class="container mt-4 pt-lg-2 pb-3">
+        <h1 class="pb-3" style="max-width: 970px;">Building Inclusive Microcopy for Diverse User Bases</h1>
+        <div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-3">
+          <div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-4">
+            <div class="fs-xs border-end pe-3 me-3 mb-2">
+              <span class="badge bg-faded-primary text-primary fs-base">Technology</span>
+            </div>
+            <div class="fs-sm border-end pe-3 me-3 mb-2">12 hours ago</div>
+            <div class="d-flex mb-2">
+              <div class="d-flex align-items-center me-3">
+                <i class="bx bx-like fs-base me-1"></i>
+                <span class="fs-sm">8</span>
+              </div>
+              <div class="d-flex align-items-center me-3">
+                <i class="bx bx-comment fs-base me-1"></i>
+                <span class="fs-sm">4</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bx bx-share-alt fs-base me-1"></i>
+                <span class="fs-sm">2</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
+            <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle" width="60" alt="Debora Barbato">
+            <div class="ps-3">
+              <h6 class="mb-1">Author</h6>
+              <a href="#" class="fw-semibold stretched-link">Debora Barbato</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Post image (parallax) -->
+      <div class="jarallax mb-lg-5 mb-4" data-jarallax data-speed="0.35" style="height: 36.45vw; min-height: 300px;">
+        <div class="jarallax-img" style="background-image: url(assets/img/blog/single/cover-image.jpg);"></div>
+      </div>
+
+
+      <!-- Post content + Sharing -->
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row gy-4">
+
+          <!-- Content -->
+          <div class="col-lg-9">
+            <h3 class="h5 mb-4 pb-2 fw-medium">In the world of product design, the smallest words can make the biggest difference. After 10+ years in UX writing across finance and AI, I've learned that inclusive microcopy – those brief interface messages, buttons, and error notes – can either welcome a user in or unwittingly shut them out.</h3>
+            
+            <p class="mb-4 pb-2">In my experience at J.P. Morgan Chase, simplifying support content and making it more inclusive helped cut monthly call volume by over one-third. At Yahoo, crafting clear, jargon-free in-app messages transformed complex tech into accessible, conversational interfaces for millions of users. Even adding a dash of warmth and personality (without sacrificing clarity) boosted user trust and reduced confusion by 40% in an AI-driven feature. These wins weren't just lucky breaks – they highlight why inclusive microcopy isn't a "nice-to-have" but a must-have in product design.</p>
+
+            <p class="mb-4 pb-2">My guiding principle has become <em>content so clear it's invisible</em>: the user shouldn't have to think about the words, only their task. Below, I'll dive into why inclusive microcopy matters, how to write it well, and how to test it to ensure no user is left behind. Whether you're a content designer or a hiring manager evaluating UX writing skills, I hope these insights and real-world examples help you build experiences that everyone can love and understand.</p>
+
+            <h2 class="h4">Why Inclusive Microcopy Matters</h2>
+            <p class="mb-4 pb-2">Inclusive microcopy is microcopy that allows <em>all</em> your users to feel welcomed and able to use your product with the same ease and delight as any other user. It's about deliberately considering the wide range of human differences – in background, language, ability, culture, gender identity, and beyond – and writing for all of them, not just an assumed "average" user. In fact, there really is no such thing as an average user.</p>
+
+            <p class="mb-4 pb-2">Designing content with a mythical normal persona in mind will inevitably exclude many people. Instead, when we seek out the needs of those at the margins and solve for more specific use cases, we often create solutions that work better for everyone – a phenomenon known as the "Curb-Cut Effect" or Paradox of Specificity (curb cuts, after all, help not just wheelchair users but parents with strollers, travelers with luggage, etc.).</p>
+
+            <p class="mb-4 pb-2">From a user experience perspective, inclusive microcopy fosters trust and confidence. Users who feel seen and understood are more likely to stick around and even champion your product. On the flip side, non-inclusive copy can confuse, frustrate, or even offend users, leading to drop-offs and support calls. Imagine an app that uses idioms or slang that only make sense to Americans, or a form that forces users to pick "Male" or "Female" when that doesn't fit them – these users will feel alienated or frustrated immediately.</p>
+
+            <p class="mb-4 pb-2">Inclusive writing is also increasingly a business imperative and a legal one. Accessibility standards like the Web Content Accessibility Guidelines (WCAG 2.1) provide clear guidance for making content inclusive, and applying those guidelines doesn't only help people with disabilities – it improves usability for everyone. When we make content perceivable, understandable, and usable by the broadest group, we naturally broaden our reach.</p>
+
+            <p class="mb-4 pb-2">In practice, that can mean higher customer satisfaction, less support cost, and better conversion rates. For example, after we redesigned a banking app's content with an inclusive, self-service mindset, support calls dropped by tens of thousands per month – users were empowered to solve issues on their own because the instructions actually made sense to them. Bottom line: inclusive microcopy matters not only because it's the right thing to do, but because it creates products that are effective, enjoyable, and profitable.</p>
+
+            <h2 class="h4">How to Write Inclusive Microcopy</h2>
+            <p class="mb-4 pb-2">Writing inclusive microcopy is both an art and a discipline. It requires empathy, awareness of bias, knowledge of your audience, and attention to detail. Here are some key principles and best practices to ensure your UX content speaks to a wide, diverse user base:</p>
+
+            <h3 class="h5 mb-3">1. Use Plain Language and Clarity Over Creativity</h3>
+            <p class="mb-4 pb-2">Prioritize clarity over cleverness. Microcopy isn't the place to show off poetic flair at the expense of understanding. Aim for plain language that an average middle-school student could understand. In fact, shooting for about an 8th-grade reading level is a good rule of thumb. Short sentences and common words help ensure that even non-native speakers or less-educated users can follow along.</p>
+
+            <p class="mb-4 pb-2">Avoid jargon and overly technical terms; if you must use them (say, for a complex fintech or AI concept), provide a brief explanation so nobody's left puzzled. Excessive jargon or "inside baseball" language will alienate part of your audience. The same goes for corporate buzzwords or legalese – simplify wherever possible.</p>
+
+            <p class="mb-4 pb-2">It's also wise to avoid metaphors, idioms, or cultural slang that might not translate universally. What's obvious to you ("break the ice," "piggybacking," "on the same page") could be gibberish or taken literally by someone from a different culture or language background. One guiding maxim: If not everyone will get the joke, don't use it.</p>
+
+            <h3 class="h5 mb-3">2. Be Inclusive and Bias-Aware in Terminology</h3>
+            <p class="mb-4 pb-2">The words we choose should make <em>everyone</em> feel seen and respected. This starts with using inclusive, gender-neutral language. Avoid unnecessarily gendered words or stereotypes – for instance, prefer "chairperson" over "chairman," or "they" as a singular pronoun if gender is unknown or irrelevant.</p>
+
+            <p class="mb-4 pb-2">In form microcopy, think twice about asking for information like gender at all; if you do, consider offering a range of options or a free-form field for people to describe themselves. Always include an option for users who don't identify with the binary choices. Small copy decisions here, like labeling a field "Your pronouns" instead of "Gender," send a message of inclusion.</p>
+
+            <p class="mb-4 pb-2">Beyond individual words, watch out for unconscious bias creeping into your copy. We all have blind spots, so it's crucial to question our assumptions. Don't assume the user has a certain background, technical level, or identity. Phrases like "simply connect your Facebook account" might alienate users in countries where Facebook isn't prevalent, or an instruction like "ask your mom or dad" ignores other guardians and family structures.</p>
+
+            <h3 class="h5 mb-3">3. Write for All Abilities (Accessibility in Microcopy)</h3>
+            <p class="mb-4 pb-2">Accessibility is a key part of inclusivity. A truly inclusive microcopy works for users with visual, auditory, cognitive, or motor impairments just as well as for everyone else. In practice, this means a few things for UX writing:</p>
+
+            <ul class="mb-4 pb-2 ps-4">
+              <li class="mb-1"><strong>Provide textual alternatives and assistive cues:</strong> Ensure every image or icon with meaning has descriptive alt text or an equivalent label for screen readers. If a button just shows a symbol (say, a trash can icon for "Delete"), your microcopy should include a label or aria-text so that non-sighted users know what that icon does.</li>
+              <li class="mb-1"><strong>Make interactive copy descriptive:</strong> Every call-to-action or menu item should clearly state its purpose. Instead of a vague "Submit" or "Continue," use more specific wording like "Subscribe and Continue" or "Save Settings."</li>
+              <li class="mb-1"><strong>Design for error prevention and recovery:</strong> Inclusive microcopy anticipates mistakes and helps users avoid or fix them gracefully. That means writing clear instructions ("password must be 8+ characters") before the user hits "Submit," and providing polite, constructive error messages if something goes wrong.</li>
+              <li class="mb-1"><strong>Consider cognitive load and neurodiversity:</strong> People process information differently. Some users (for example, those with dyslexia, ADHD, or autism) may prefer more straightforward language and uncluttered interfaces. Break complex information into steps or bulleted lists, and avoid overwhelming walls of text.</li>
+            </ul>
+
+            <h3 class="h5 mb-3">4. Know Your Audience(s) and Localize Your Content</h3>
+            <p class="mb-4 pb-2">Inclusive microcopy requires a good understanding of who you're writing for – often a very broad set of users. Do your research on user demographics, cultural contexts, and language preferences. What works for a U.S. audience might not work for users in Japan or Brazil.</p>
+
+            <p class="mb-4 pb-2">For instance, humor or idioms that seem harmless in one locale could be confusing or even offensive in another. Always research cultural norms for the regions your product serves. This might involve consulting localization experts or style guides for different markets. Collaborating with native speakers when translating or adapting copy is invaluable; automated translation can miss nuances, so have a human review to ensure nothing is lost in translation.</p>
+
+            <p class="mb-4 pb-2">When writing English copy for a global audience, keep it globally friendly: stick to universal terms, avoid U.S.-centric pop culture references or sports metaphors, and be mindful of units and dates. If you mention holidays or examples, consider whether they apply globally – if not, generalize or provide different examples by region.</p>
+
+            <h2 class="h4">How to Test Inclusive Microcopy</h2>
+            <p class="mb-4 pb-2">Writing inclusive copy is only half the battle – you also need to validate that it's working as intended. Testing your microcopy (and the experiences around it) with real users is the best way to uncover blind spots and ensure your content is truly inclusive. Here are some strategies for testing and iterating on UX content:</p>
+
+            <h3 class="h5 mb-3">Conduct User Research with Diverse Users</h3>
+            <p class="mb-4 pb-2">Whenever possible, include a variety of users in your content testing. This could be as informal as hallway usability tests or as structured as formal usability studies and surveys. The goal is to observe how people from different backgrounds and abilities interact with your content. Do they understand the instructions? Do error messages make sense to them?</p>
+
+            <p class="mb-4 pb-2">For example, when we rolled out a new AI-driven feature, we sought feedback from less tech-savvy users to ensure the terminology was approachable. If you're targeting a specific group (say, improving an onboarding flow for dyslexic users), recruit participants from that group and gather their feedback.</p>
+
+            <h3 class="h5 mb-3">Use Accessibility Testing Tools</h3>
+            <p class="mb-4 pb-2">Don't limit testing to sighted, able-bodied users. Run your screens through screen readers (like NVDA or VoiceOver) to see how well your microcopy works when read aloud. Does the order of content make sense? Are interactive elements announced clearly? Verifying that link text and button text make sense out of context is crucial.</p>
+
+            <h3 class="h5 mb-3">A/B Test and Measure Outcomes</h3>
+            <p class="mb-4 pb-2">If you have a large user base, consider A/B testing different copy approaches to see which is more effective across your diverse audience. For instance, you might test a verbose error message vs. a shorter one to see which yields better task completion or fewer support tickets. Metrics like drop-off rates, click-through rates, or even support call volume can provide quantitative evidence of content effectiveness.</p>
+
+            <h3 class="h5 mb-3">Review Support Channels and Feedback</h3>
+            <p class="mb-4 pb-2">Another practical way to test your microcopy's inclusiveness is to monitor user feedback channels continuously. This includes support tickets, chat transcripts, call center logs, social media comments, and app store reviews. They're a goldmine for understanding where users get confused or feel misled.</p>
+
+            <h2 class="h4">Conclusion & Key Takeaways</h2>
+            <p class="mb-4 pb-2">Building inclusive microcopy is an ongoing journey, not a one-time task. The digital world and our user bases are constantly evolving, so we, as content designers, must commit to continuous learning and iteration. In my career spanning fintech apps and AI platforms, the most rewarding moments have been when inclusive writing turned a confusing experience into an empowering one for a previously overlooked user.</p>
+
+            <p class="mb-4 pb-2">To wrap up, here are some key takeaways you can apply in your own UX writing and product work starting today:</p>
+
+            <ul class="mb-4 pb-2 ps-4">
+              <li class="mb-1"><strong>Keep empathy at the core:</strong> Write with the mindset that your users aren't exactly like you. Anticipate their needs and feelings. If you cultivate empathy and curiosity about different perspectives, your microcopy will naturally become more inclusive.</li>
+              <li class="mb-1"><strong>Clarity is non-negotiable:</strong> Favor simple, direct language. Cut jargon and explain complex concepts. If your microcopy "sounds like a human and not a manual," you're on the right track.</li>
+              <li class="mb-1"><strong>Avoid one-size-fits-all language:</strong> Remember that cultural context matters. Steer clear of local idioms, pop references, or anything that doesn't travel well internationally. Aim for language that anyone in your audience could grasp without confusion.</li>
+              <li class="mb-1"><strong>Respect diversity in every detail:</strong> Use inclusive terms (gender-neutral pronouns, unbiased labels) and consider if every user will feel represented. Don't make users adapt to your content – adapt your content to your users.</li>
+              <li class="mb-1"><strong>Design with accessibility in mind:</strong> Write microcopy that works for screen readers and all abilities. Add alt text, make link text self-sufficient, and be explicit in your instructions. A good test: imagine reading your UI aloud – does it still make sense?</li>
+              <li class="mb-1"><strong>Test early and often with real users:</strong> Get feedback from people of different backgrounds and abilities before you ship. Even a small round of testing can reveal whether your copy truly resonates universally or if it's tripping someone up.</li>
+              <li class="mb-1"><strong>Keep learning and iterating:</strong> Inclusive writing is a practice that evolves. Stay updated on best practices and be open to feedback. Our understanding of inclusive language will continue to grow – and that's a good thing.</li>
+            </ul>
+
+            <p class="mb-4 pb-2">By focusing on inclusive microcopy, you're not just polishing the words in an interface; you're crafting an experience that speaks to people, in all their beautiful diversity. Done right, those small bits of text become invisible helpers – quietly guiding every user to success, no matter who they are or where they come from.</p>
+
+            <p class="mb-4 pb-2">And when users of all stripes can use your product with ease and confidence, everybody wins.</p>
+
+            <!-- Tags -->
+            <hr class="mb-4">
+            <div class="d-flex flex-sm-row flex-column pt-2">
+              <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">Related Tags:</h6>
+              <div>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#inclusivedesign</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#uxwriting</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#accessibility</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#microcopy</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#contentdesign</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sharing -->
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
+              <span class="d-block mb-3">12 min read</span>
+              <h6>Share this post:</h6>
+              <div class="mb-4 pb-lg-3">
+                <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2" aria-label="Facebook">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2" aria-label="Twitter">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
+              <button type="button" class="btn btn-lg btn-outline-secondary">
+                <i class="bx bx-like me-2 lead"></i>
+                Like it
+                <span class="badge bg-primary shadow-primary mt-n1 ms-3">8</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related articles (Slider below lg breakpoint) -->
+      <section class="container mb-5 pt-md-4">
+        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
+          <h2 class="h1 mb-sm-0">Related Articles</h2>
+          <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-lg btn-outline-primary ms-4">
+            All posts
+            <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
+          </a>
+        </div>
+
+        <div class="swiper mx-n2" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 8,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "1000": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-ux-writing-mobile-banking.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/02.jpg" class="card-img-top" alt="UX Writing Mobile Banking">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">UX Writing</a>
+                    <span class="fs-sm text-muted">January 2025</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-ux-writing-mobile-banking.html">The Impact of UX Writing on Mobile Banking Engagement</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle me-3" width="48" alt="Debora Barbato">
+                    Debora Barbato
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-mentoring-content-designers.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/06.jpg" class="card-img-top" alt="Mentoring Content Designers">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Team Building</a>
+                    <span class="fs-sm text-muted">January 2025</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-mentoring-content-designers.html">Mentoring Content Designers: Building Stronger Teams</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle me-3" width="48" alt="Debora Barbato">
+                    Debora Barbato
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-cross-functional-collaboration.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/03.jpg" class="card-img-top" alt="Cross-Functional Collaboration">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Collaboration</a>
+                    <span class="fs-sm text-muted">January 2025</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-cross-functional-collaboration.html">Cross-Functional Collaboration in Content Design</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle me-3" width="48" alt="Debora Barbato">
+                    Debora Barbato
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+              Debs.ink
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>
+            <form class="needs-validation" novalidate>
+              <label for="subscr-email" class="form-label">Subscribe to content design insights</label>
+              <div class="input-group">
+                <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                </h6>
+                <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                    <li class="nav-item"><a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Impact</a></li>
+                                            <li class="nav-item"><a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
+                  </ul>
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                </h6>
+                <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="https://www.linkedin.com/in/debora-barbato-81b2113b" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                    <li class="nav-item"><a href="http://debcontent.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Portfolio</a></li>
+                    <li class="nav-item"><a href="mailto:de.barbatosf@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Email</a></li>
+                    <li class="nav-item"><a href="assets/resume/Debora-Barbato_Resume-Sept_2025.pdf" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank" rel="noopener">Resume</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contact Deb</h6>
+                <a href="mailto:de.barbatosf@gmail.com" class="fw-medium">de.barbatosf@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+          <span class="text-light opacity-50">&copy; 2025 Debora Barbato. All rights reserved. Senior Content Designer & UX Writer - Website made with ♡ by <a href="https://florentin.us" class="text-light opacity-50 text-decoration-none">Florentin</a></span>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

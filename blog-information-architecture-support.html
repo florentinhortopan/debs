@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Debs.ink | Content Design Blog - How Information Architecture Reduces Customer Support Calls by 35%</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore insights on content design, UX writing, and digital strategy from Debora Barbato, Senior Content Designer. Discover how technology is reshaping content creation and user experience.">
+    <meta name="keywords" content="content design, UX writing, digital strategy, content strategy, user experience, content creation, Debora Barbato, senior content designer, technology, digital content, user interface, content optimization">
+    <meta name="author" content="Debora Barbato">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Debora Barbato | Content Design Blog - This Long-Awaited Technology May Finally Change the World">
+    <meta property="og:description" content="Explore insights on content design, UX writing, and digital strategy from Debora Barbato, Senior Content Designer.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://deborabarbato.com/blog-single">
+    <meta property="og:image" content="https://deborabarbato.com/assets/img/blog/single/cover-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Debora Barbato | Content Design Blog">
+    <meta name="twitter:description" content="Explore insights on content design, UX writing, and digital strategy from Debora Barbato, Senior Content Designer.">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+
+  </head>
+
+
+  <!-- Body -->
+  <body>
+    
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+            Debs.ink
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Impact</a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Contacts</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="contacts-v1.html" class="btn btn-primary w-100">
+                <i class="bx bx-envelope fs-4 lh-1 me-1"></i>
+                &nbsp;Get in Touch
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="contacts-v1.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+            <i class="bx bx-envelope fs-5 lh-1 me-1"></i>
+            &nbsp;Contact Me
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Breadcrumb -->
+      <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="blog-list-with-sidebar.html">Blog</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Information Architecture</li>
+        </ol> 
+      </nav>
+
+
+      <!-- Post title + Meta  -->
+      <section class="container mt-4 pt-lg-2 pb-3">
+        <h1 class="pb-3" style="max-width: 970px;">How Information Architecture Reduces Customer Support Calls by 35%</h1>
+        <div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-3">
+          <div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-4">
+            <div class="fs-xs border-end pe-3 me-3 mb-2">
+              <span class="badge bg-faded-primary text-primary fs-base">Technology</span>
+            </div>
+            <div class="fs-sm border-end pe-3 me-3 mb-2">12 hours ago</div>
+            <div class="d-flex mb-2">
+              <div class="d-flex align-items-center me-3">
+                <i class="bx bx-like fs-base me-1"></i>
+                <span class="fs-sm">8</span>
+              </div>
+              <div class="d-flex align-items-center me-3">
+                <i class="bx bx-comment fs-base me-1"></i>
+                <span class="fs-sm">4</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bx bx-share-alt fs-base me-1"></i>
+                <span class="fs-sm">2</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
+            <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle" width="60" alt="Debora Barbato">
+            <div class="ps-3">
+              <h6 class="mb-1">Author</h6>
+              <a href="#" class="fw-semibold stretched-link">Debora Barbato</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Post image (parallax) -->
+      <div class="jarallax mb-lg-5 mb-4" data-jarallax data-speed="0.35" style="height: 36.45vw; min-height: 300px;">
+        <div class="jarallax-img" style="background-image: url(assets/img/blog/single/cover-image.jpg);"></div>
+      </div>
+
+
+      <!-- Post content + Sharing -->
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row gy-4">
+
+          <!-- Content -->
+          <div class="col-lg-9">
+            <h3 class="h5 mb-4 pb-2 fw-medium">When users can't find what they need on a website or app, they often resort to calling customer support. These unnecessary support calls are costly and signal friction in the user experience. The good news is that improving your Information Architecture (IA) – the way content is structured and labeled – can drastically cut down support contacts.</h3>
+            
+            <h2 class="h4">The Cost of Poor Information Architecture on Support</h2>
+            <p class="mb-4 pb-2">Why do better information structures lead to fewer support calls? Consider what happens when IA is poorly organized: Customers can't find answers on their own. In other words, a confusing site or app structure turns your support line into a search tool of last resort. This is a lose-lose scenario: users grow frustrated, and the company racks up support costs.</p>
+            <p class="mb-4 pb-2">The flip side is that fixing your IA can quickly relieve this support burden. Often the issue is that content is arranged according to internal org charts or outdated labels, rather than the way users think. After rethinking and restructuring pages around user journeys, one company saw support tickets drop by 43% in just four months. Atlassian also reported that when it adapted its IA to match user expectations, help desk requests fell by 35%. Better IA directly translates to fewer people reaching for the phone or chat for help.</p>
+
+            <h2 class="h4">Case Study: Cutting Calls by 35% with a Support IA Redesign</h2>
+            <p class="mb-4 pb-2">As a content design lead at J.P. Morgan Chase, I saw how powerful IA improvements can be. Our mobile app's customer support section was generating high call volumes, indicating that users weren't finding what they needed in the app. I spearheaded an information architecture redesign of the mobile support experience, focusing on user-centric organization and clearer language. The results were dramatic: we cut call volume by 35%, which meant about 90,000 fewer calls per month. By easing the strain on call centers, this IA overhaul saved the bank an estimated $3M annually in support costs.</p>
+
+            <!-- Quotation -->
+            <figure class="position-relative mb-4 ps-4">
+              <span class="position-absolute top-0 start-0 w-3 h-100 bg-primary"></span>
+              <blockquote class="blockquote fs-xl fw-medium text-dark ps-1 ps-sm-3">
+                <p>Improving your Information Architecture (IA) – the way content is structured and labeled – can drastically cut down support contacts. By redesigning the IA of a mobile banking support section, our team reduced call volume by 35%, eliminating about 90,000 calls per month and saving roughly $3 million a year in support costs.</p>
+              </blockquote>
+              <figcaption class="d-flex align-items-center pt-3 ps-1 ps-sm-3">
+                <img src="assets/img/avatar/Debora-Barbato-avatar.png" width="48" class="rounded-circle" alt="Debora Barbato">
+                <div class="ps-3">
+                  <h6 class="fw-semibold lh-base mb-0">Debora Barbato</h6>
+                  <span class="fs-sm text-muted">Senior Content Designer</span>
+                </div>
+              </figcaption>
+            </figure>
+
+            <h2 class="h4">How We Achieved This Success</h2>
+            <p class="mb-4 pb-2">Our approach centered on content design principles and collaboration. First, we analyzed data and customer feedback to pinpoint which help topics were causing confusion. We discovered that some answers were buried under opaque menu labels or in the wrong place. Using that insight, we reorganized the support content to mirror customers' mental models. This meant grouping information by user task and topic, not internal categories, and renaming sections with the terms customers use.</p>
+            <p class="mb-4 pb-2">We also worked across teams to make the new IA seamless. I partnered with UX researchers, product managers, and our Design System team to prototype and test the revamped structure early. Techniques like tree testing and card sorting helped validate that our new taxonomy was intuitive. By involving real users in testing, we ensured the menu categories and support topics made sense to them.</p>
+
+            <h2 class="h4">The Role of UX Writing in IA Success</h2>
+            <p class="mb-4 pb-2">Throughout the project, UX writing played a crucial role. Clear, concise microcopy in menus and help articles can preempt many "How do I…?" calls. Effective UX writing itself reduces the need for support by answering users' questions up front in plain language. In the Chase project, every piece of support content was rewritten for clarity and consistency. By providing helpful, findable answers in-app, we resolved customer issues at the source.</p>
+
+            <h4 class="h6">
+              <i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"></i>
+              KEY TAKEAWAYS FOR CONTENT DESIGNERS
+            </h4>
+            <ul class="mb-4 pb-2 ps-4">
+              <li class="mb-1">Design for Findability: Structure your help content around how users seek information, not how your org chart is set up</li>
+              <li class="mb-1">Use the Customer's Language: Labels and navigation terms should align with the words your users use</li>
+              <li class="mb-1">Test and Iterate Your Taxonomy: Don't rely on guesses - use card sorting, tree testing, and usability testing</li>
+              <li class="mb-1">Collaborate Across Teams: Partner with designers, developers, and support agents for better results</li>
+              <li class="mb-1">Measure the Impact: Track call volumes, support ticket counts, and customer satisfaction metrics</li>
+              <li>Focus on User Journeys: Organize content by how users think and behave, not internal structures</li>
+            </ul>
+
+            <h2 class="h4">Building Better Experiences and Bottom Lines</h2>
+            <p class="mb-4 pb-2">Improving information architecture isn't just a tidying exercise – it's a powerful way to improve user experience and deliver business value. When users can seamlessly find answers on their own, they're happier and more confident in the product. Meanwhile, companies benefit through lower support costs and more scalable customer service.</p>
+            <p class="mb-4 pb-2">For content designers and content strategists, this is a reminder of our strategic impact. We're not "just writing copy" – we are designing information ecosystems that can make or break a customer's journey. The 35% drop in support calls we achieved wasn't magic; it was content design in action, solving a UX problem with a blend of research, writing, and design structure.</p>
+
+            <!-- Tags -->
+            <hr class="mb-4">
+            <div class="d-flex flex-sm-row flex-column pt-2">
+              <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">Related Tags:</h6>
+              <div>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#informationarchitecture</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#customersupport</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#contentdesign</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sharing -->
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
+              <span class="d-block mb-3">12 min read</span>
+              <h6>Share this post:</h6>
+              <div class="mb-4 pb-lg-3">
+                <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2" aria-label="Facebook">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2" aria-label="Twitter">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
+              <button type="button" class="btn btn-lg btn-outline-secondary">
+                <i class="bx bx-like me-2 lead"></i>
+                Like it
+                <span class="badge bg-primary shadow-primary mt-n1 ms-3">15</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- Subscription form + Sharing -->
+      <section class="container mb-4 pb-2 mb-md-5 pb-lg-5">
+        <div class="row gy-5 justify-content-center">
+          <!-- Subscription form + Sharing -->
+          <div class="col-lg-6 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 70px !important;">
+              <div class="row gy-lg-5 gy-4 justify-content-center text-lg-start text-center">
+
+
+
+                <!-- Sharing -->
+                <div class="col-lg-12 col-sm-7 col-11">
+                  <h6 class="fs-lg">Don’t forget to share it</h6>
+                  <div class="mb-4 pb-lg-3">
+                    <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2" aria-label="LinkedIn">
+                      <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2" aria-label="Facebook">
+                      <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2" aria-label="Twitter">
+                      <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Related articles (Slider below lg breakpoint) -->
+      <section class="container mb-5 pt-md-4">
+        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
+          <h2 class="h1 mb-sm-0">Related Articles</h2>
+          <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-lg btn-outline-primary ms-4">
+            All posts
+            <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
+          </a>
+        </div>
+
+        <div class="swiper mx-n2" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 8,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "1000": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-inclusive-microcopy.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/01.jpg" class="card-img-top" alt="Building Inclusive Microcopy">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Content Strategy</a>
+                    <span class="fs-sm text-muted">January 2025</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-inclusive-microcopy.html">Building Inclusive Microcopy for Diverse User Bases</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle me-3" width="48" alt="Debora Barbato">
+                    Debora Barbato
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-ux-writing-mobile-banking.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/06.jpg" class="card-img-top" alt="UX Writing Mobile Banking">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">UX Writing</a>
+                    <span class="fs-sm text-muted">January 2025</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-ux-writing-mobile-banking.html">The Impact of UX Writing on Mobile Banking Engagement</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle me-3" width="48" alt="Debora Barbato">
+                    Debora Barbato
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-cross-functional-collaboration.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/03.jpg" class="card-img-top" alt="Cross-Functional Collaboration">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Collaboration</a>
+                    <span class="fs-sm text-muted">January 2025</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-cross-functional-collaboration.html">Cross-Functional Collaboration in Content Design</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/Debora-Barbato-avatar.png" class="rounded-circle me-3" width="48" alt="Debora Barbato">
+                    Debora Barbato
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+              Debs.ink
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>
+            <form class="needs-validation" novalidate>
+              <label for="subscr-email" class="form-label">Subscribe to content design insights</label>
+              <div class="input-group">
+                <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                </h6>
+                <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                    <li class="nav-item"><a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Impact</a></li>
+                                            <li class="nav-item"><a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
+                  </ul>
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                </h6>
+                <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="https://www.linkedin.com/in/debora-barbato-81b2113b" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                    <li class="nav-item"><a href="http://debcontent.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Portfolio</a></li>
+                    <li class="nav-item"><a href="mailto:de.barbatosf@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Email</a></li>
+                    <li class="nav-item"><a href="assets/resume/Debora-Barbato_Resume-Sept_2025.pdf" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank" rel="noopener">Resume</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contact Deb</h6>
+                <a href="mailto:de.barbatosf@gmail.com" class="fw-medium">de.barbatosf@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+          <span class="text-light opacity-50">&copy; 2025 Debora Barbato. All rights reserved. Senior Content Designer & UX Writer - Website made with ♡ by <a href="https://florentin.us" class="text-light opacity-50 text-decoration-none">Florentin</a></span>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

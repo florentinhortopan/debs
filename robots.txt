@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /assets/resume/
+Disallow: /assets/resume/*
+
+# Allow all other content
+Allow: /
+
+# Sitemap
+Sitemap: https://debs.ink/sitemap.xml
