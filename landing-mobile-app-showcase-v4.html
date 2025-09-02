@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Debs.ink | Content Design & UX Writing Landing v.4</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Debs.ink - Senior Content Designer & UX Writer specializing in mobile-first content strategy, inclusive microcopy, and scalable content systems that serve 50M+ users.">
+    <meta name="keywords" content="content design, ux writing, microcopy, content strategy, mobile-first design, inclusive design, user experience, content systems, debora barbato">
+    <meta name="author" content="Debora Barbato">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @keyframes spinner {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      /* Custom animations for v4 */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+      .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      @keyframes floating {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header navbar navbar-expand-lg navbar-light navbar-sticky navbar-scrolled">
+      <div class="container px-3 px-xl-0">
+        <div class="navbar-brand me-0 me-xl-4">
+          <a href="index.html">
+            <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+            <span class="text-dark fw-semibold">Debs.ink</span>
+          </a>
+        </div>
+        <div class="navbar-nav navbar-nav-scroll me-auto" style="max-width: 30rem;">
+          <div class="navbar-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="nav-link">About</a>
+            <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Impact</a>
+            <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Contact</a>
+          </div>
+        </div>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <input type="checkbox" class="form-check-input" id="theme-mode">
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+          <i class="bx bx-envelope fs-5 lh-1 me-1"></i>
+          &nbsp;Get in Touch
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section with Enhanced Parallax -->
+      <section class="overflow-hidden pt-5" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.1) 41.83%, rgba(236, 72, 153, 0.08) 82.52%);">
+        <div class="container pt-3 pt-sm-4 pt-xl-5">
+          <div class="row pt-md-2 pt-lg-5">
+            <div class="col-md-5 d-flex flex-column mt-md-4 pt-5 pb-3 pb-sm-4 py-md-5">
+              <h1 class="display-4 text-center text-md-start mb-4">
+                Transform User Experiences Through 
+                <span class="gradient-text">Content Design</span>
+              </h1>
+              <p class="fs-lg text-center text-md-start pb-2 pb-md-3 mb-4 mb-lg-5">
+                Senior Content Designer with 10+ years of experience crafting inclusive microcopy and scalable content systems that serve 50M+ users worldwide.
+              </p>
+              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start">
+                <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-dark btn-lg px-3 py-2 me-sm-3 me-lg-4 mb-3">
+                  <i class="bx bx-envelope fs-4 me-2"></i>
+                  Start a Project
+                </a>
+                <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-outline-dark btn-lg px-3 py-2 mb-3">
+                  <i class="bx bx-show fs-4 me-2"></i>
+                  View Portfolio
+                </a>
+              </div>
+              <div class="position-relative d-inline-flex align-items-center justify-content-center justify-content-md-start mt-auto pt-3 pt-md-4 pb-xl-2">
+                <a href="#features" class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3 floating" data-scroll data-scroll-offset="120" aria-label="Scroll for more">
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <span class="fs-sm">Discover more</span>
+              </div>     
+            </div>
+            <div class="col-md-7 align-self-end">
+              <div class="position-relative overflow-hidden mt-4 pb-3 pt-4 mx-auto me-md-0" style="max-width: 632px;">
+                <div class="ratio ratio-1x1"></div>
+                <img src="assets/img/landing/app-showcase-1/hero-phone-1.png" class="rellax position-absolute top-0 start-0 zindex-2" data-rellax-speed="1.6" data-disable-parallax-down="md" alt="Content Design Mobile App">
+                <img src="assets/img/landing/app-showcase-1/hero-phone-2.png" class="rellax position-absolute top-0 start-0" data-rellax-speed="2.8" data-disable-parallax-down="md" alt="UX Writing Mobile App">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="bg-dark position-relative pt-5 pb-4 py-md-5" data-bs-theme="dark">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary"></div>
+        <div class="container position-relative zindex-3 py-lg-4 pt-md-2 py-xl-5 mb-lg-4">
+          <div class="row justify-content-center text-center pb-4 mb-2">
+            <div class="col-xl-6 pt-2">
+              <h2 class="h1 mb-4">Content Design Impact</h2>
+              <p class="text-body fs-lg mb-0">Transforming complex user experiences into intuitive, accessible interfaces through strategic content design and UX writing.</p>
+            </div>
+          </div>
+          
+          <div class="row g-4 text-center">
+            <div class="col-sm-6 col-lg-3">
+              <div class="h1 mb-2">50M+</div>
+              <p class="mb-0">Users Served</p>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="h1 mb-2">10+</div>
+              <p class="mb-0">Years Experience</p>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="h1 mb-2">95%</div>
+              <p class="mb-0">First-Pass Resolution</p>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="h1 mb-2">40%</div>
+              <p class="mb-0">Cognitive Load Reduction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="container py-5 mt-md-2 mt-lg-4" id="features">
+        <div class="row justify-content-center text-center pb-4 mb-2">
+          <div class="col-xl-6 pt-2">
+            <h2 class="h1 mb-4">Content Design Services</h2>
+            <p class="fs-lg mb-0">Comprehensive content design solutions that drive user engagement and business success.</p>
+          </div>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-body card-hover h-100 border-0 shadow-sm">
+              <div class="d-inline-flex bg-primary bg-opacity-10 rounded-3 p-3 mb-3">
+                <i class="bx bx-mobile-alt fs-3 text-primary"></i>
+              </div>
+              <h3 class="h5 mb-3">Mobile-First Content Strategy</h3>
+              <p class="mb-0">Optimize content for mobile devices with responsive design principles and touch-friendly interactions.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-body card-hover h-100 border-0 shadow-sm">
+              <div class="d-inline-flex bg-success bg-opacity-10 rounded-3 p-3 mb-3">
+                <i class="bx bx-accessibility fs-3 text-success"></i>
+              </div>
+              <h3 class="h5 mb-3">Inclusive Microcopy</h3>
+              <p class="mb-0">Create accessible, inclusive content that welcomes all users regardless of their background or abilities.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-body card-hover h-100 border-0 shadow-sm">
+              <div class="d-inline-flex bg-warning bg-opacity-10 rounded-3 p-3 mb-3">
+                <i class="bx bx-bar-chart-alt-2 fs-3 text-warning"></i>
+              </div>
+              <h3 class="h5 mb-3">Data-Driven Optimization</h3>
+              <p class="mb-0">Leverage analytics and user research to continuously improve content performance and user satisfaction.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-body card-hover h-100 border-0 shadow-sm">
+              <div class="d-inline-flex bg-info bg-opacity-10 rounded-3 p-3 mb-3">
+                <i class="bx bx-architecture fs-3 text-info"></i>
+              </div>
+              <h3 class="h5 mb-3">Scalable Content Systems</h3>
+              <p class="mb-0">Build robust content frameworks that grow with your business and maintain consistency across platforms.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-body card-hover h-100 border-0 shadow-sm">
+              <div class="d-inline-flex bg-danger bg-opacity-10 rounded-3 p-3 mb-3">
+                <i class="bx bx-pen-tool fs-3 text-danger"></i>
+              </div>
+              <h3 class="h5 mb-3">UX Writing & Microcopy</h3>
+              <p class="mb-0">Craft compelling, clear copy that guides users through their journey and reduces friction points.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-body card-hover h-100 border-0 shadow-sm">
+              <div class="d-inline-flex bg-secondary bg-opacity-10 rounded-3 p-3 mb-3">
+                <i class="bx bx-group fs-3 text-secondary"></i>
+              </div>
+              <h3 class="h5 mb-3">Cross-Functional Collaboration</h3>
+              <p class="mb-0">Work seamlessly with designers, developers, and stakeholders to deliver cohesive user experiences.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <div class="row justify-content-center text-center pb-4 mb-2">
+            <div class="col-xl-6 pt-2">
+              <h2 class="h1 mb-4">Content Design Process</h2>
+              <p class="fs-lg mb-0">A proven methodology that transforms user needs into exceptional content experiences.</p>
+            </div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <span class="h3 text-white mb-0">1</span>
+                </div>
+                <h3 class="h5 mb-3">Research & Discovery</h3>
+                <p class="mb-0">Understand user needs, business goals, and content requirements through comprehensive research.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <span class="h3 text-white mb-0">2</span>
+                </div>
+                <h3 class="h5 mb-3">Strategy & Planning</h3>
+                <p class="mb-0">Develop content strategy, information architecture, and content governance frameworks.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <span class="h3 text-white mb-0">3</span>
+                </div>
+                <h3 class="h5 mb-3">Design & Creation</h3>
+                <p class="mb-0">Create inclusive, accessible content that aligns with user needs and business objectives.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <span class="h3 text-white mb-0">4</span>
+                </div>
+                <h3 class="h5 mb-3">Testing & Optimization</h3>
+                <p class="mb-0">Validate content effectiveness through user testing and continuous optimization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="container py-5">
+        <div class="row justify-content-center text-center pb-4 mb-2">
+          <div class="col-xl-6 pt-2">
+            <h2 class="h1 mb-4">Frequently Asked Questions</h2>
+            <p class="fs-lg mb-0">Everything you need to know about content design and UX writing services.</p>
+          </div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faq">
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q1-heading">
+                  <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                    What is content design and how does it differ from copywriting?
+                  </button>
+                </h2>
+                <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Content design focuses on creating user-centered content that serves specific user needs and business goals. Unlike traditional copywriting, it considers the entire user journey, information architecture, and how content fits into the overall user experience design.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q2-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                    How long does a typical content design project take?
+                  </button>
+                </h2>
+                <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Project timelines vary depending on scope and complexity. A simple microcopy update might take 1-2 weeks, while a comprehensive content strategy project could take 6-8 weeks. I'll provide a detailed timeline during our initial consultation.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q3-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                    Do you work with international brands and multiple languages?
+                  </button>
+                </h2>
+                <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Yes! I have extensive experience working with global brands and creating content that works across different cultures and languages. I can help develop content strategies that maintain consistency while respecting local nuances.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q4-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                    How do you measure the success of content design?
+                  </button>
+                </h2>
+                <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Success metrics include user engagement, task completion rates, reduced support tickets, improved accessibility scores, and user satisfaction. I'll establish clear KPIs at the start of each project.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="container">
+        <div class="bg-secondary rounded-3 py-5 px-3 px-sm-4 px-lg-5 px-xl-0">
+          <div class="row align-items-center py-lg-4">
+            <div class="col-xl-5 col-md-6 offset-xl-1 mb-4 mb-md-0">
+              <div class="d-flex align-items-center">
+                <img src="assets/img/landing/app-showcase-1/notification-icon.svg" width="78" alt="Content Design icon">
+                <div class="ps-3 ms-sm-3">
+                  <h2 class="h4 mb-0">Ready to transform your user experience through content design?</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-md-6">
+              <div class="ps-lg-5 ms-xl-2">
+                <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-primary btn-lg px-4 py-3">
+                  <i class="bx bx-envelope fs-4 me-2"></i>
+                  Let's Discuss Your Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+              Debs.ink
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>
+            <form class="needs-validation" novalidate>
+              <label for="subscr-email" class="form-label">Subscribe to content design insights</label>
+              <div class="input-group">
+                <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                </h6>
+                <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                    <li class="nav-item"><a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Impact</a></li>
+                    <li class="nav-item"><a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
+                  </ul>
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                </h6>
+                <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="https://www.linkedin.com/in/debora-barbato-81b2113b" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                    <li class="nav-item"><a href="http://debcontent.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Portfolio</a></li>
+                    <li class="nav-item"><a href="mailto:de.barbatosf@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Email</a></li>
+                    <li class="nav-item"><a href="assets/resume/Debora-Barbato_Resume-Sept_2025.pdf" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank" rel="noopener">Resume</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contact Deb</h6>
+                <a href="mailto:de.barbatosf@gmail.com" class="fw-medium">de.barbatosf@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+          <span class="text-light opacity-50">&copy; 2025 Debora Barbato. All rights reserved. Senior Content Designer & UX Writer - Website made with ♡ by <a href="https://florentin.us" class="text-light opacity-50 text-decoration-none">Florentin</a></span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+    
+    <!-- Custom Scripts for v4 -->
+    <script>
+      // Fade in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all fade-in-up elements
+      document.addEventListener('DOMContentLoaded', () => {
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        fadeElements.forEach(el => observer.observe(el));
+        
+        // Remove loading screen
+        setTimeout(() => {
+          document.querySelector('.page-loading').classList.remove('active');
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

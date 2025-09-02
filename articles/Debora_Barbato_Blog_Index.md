@@ -1,6 +1,6 @@
 # Blog Articles – Debora Barbato
 
-Welcome to my collection of writing on content design, UX writing, and design leadership. Each piece combines case studies from my work with broader research and practical takeaways for content designers, UX writers, and hiring managers.
+Welcome to my collection of writing on content design, UX writing, and design leadership. Each piece combines case histories from my work with broader research and practical takeaways for content designers, UX writers, and hiring managers.
 
 ---
 

@@ -8,7 +8,7 @@ Why do better information structures lead to fewer support calls? Consider what 
 
 The flip side is that **fixing your IA can quickly relieve this support burden**. Often the issue is that content is arranged according to internal org charts or outdated labels, rather than the way *users* think. After rethinking and restructuring pages around **user journeys**, one company saw support tickets drop by 43% in just four months. Atlassian also reported that when it adapted its IA to match user expectations, help desk requests fell by 35%. Better IA directly translates to fewer people reaching for the phone or chat for help.
 
-## Case Study: Cutting Calls by 35% with a Support IA Redesign
+## Case History: Cutting Calls by 35% with a Support IA Redesign
 
 As a content design lead at J.P. Morgan Chase, I saw how powerful IA improvements can be. Our mobile app’s customer support section was generating high call volumes, indicating that users weren’t finding what they needed in the app. I spearheaded an **information architecture redesign of the mobile support experience**, focusing on user-centric organization and clearer language. The results were dramatic: we **cut call volume by 35%**, which meant about 90,000 fewer calls per month. By easing the strain on call centers, this IA overhaul **saved the bank an estimated $3M annually** in support costs. Just as importantly, it meant thousands more customers resolved issues on their own, with less frustration.
 
