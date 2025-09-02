@@ -13,11 +13,12 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
+    <!-- Theme switcher (color modes) - COMMENTED OUT TO LOCK IN LIGHT MODE -->
+    <!-- <script src="assets/js/theme-switcher.js"></script> -->
 
     <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon-dark-bg.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-dark-bg.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
@@ -152,7 +153,7 @@
       <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+            <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
             Debs.ink
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -181,11 +182,12 @@
               </a>
             </div>      
           </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <!-- Theme switcher - COMMENTED OUT TO LOCK IN LIGHT MODE -->
+          <!-- <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-          </div>
+          </div> -->
           <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -217,13 +219,13 @@
                   <li class="breadcrumb-item">
                     <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
                   </li>
-                  <li class="breadcrumb-item active" aria-current="page">About v.1</li>
+                  <li class="breadcrumb-item active" aria-current="page">About Debora</li>
                 </ol>
               </nav>
 
               <!-- Text -->
-              <h1 class="pb-2 pb-md-3">About Debora</h1>
-              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">Senior Content Designer with 10+ years of digital design experience including 6 years in the financial sector. Specialized in mobile-first content strategy, cross-functional collaboration, and data-driven optimization. Adept at crafting inclusive microcopy and scalable content systems that simplify complex product experiences while ensuring a consistent and authentic brand voice.</p>
+              <h1 class="pb-2 pb-md-3">About Debora Barbato</h1>
+              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">Debs is a Senior Content Designer with 10+ years of digital design experience including 6 years in the financial sector. She specializes in mobile-first content strategy, cross-functional collaboration, and data-driven optimization. Debs is adept at crafting inclusive microcopy and scalable content systems that simplify complex product experiences while ensuring a consistent and authentic brand voice.</p>
               <div class="row row-cols-3 pt-4 pt-md-5 mt-2 mt-xl-4">
                 <div class="col">
                   <h3 class="h2 mb-2">10+</h3>
@@ -491,116 +493,7 @@
       </section>
 
 
-      <!-- Social networks (Carousel on narrow screens) -->
-      <section class="container text-center py-5 my-2 my-md-4 my-lg-5">
-        <h2 class="h1 mb-4">Connect with Debs</h2>
-        <p class="fs-lg text-muted pb-2 mb-5">Let's stay connected and keep up with the latest in content design!</p>
-        <div class="swiper" data-swiper-options='{
-          "slidesPerView": 2,
-          "pagination": {
-            "el": ".swiper-pagination",
-            "clickable": true
-          },
-          "breakpoints": {
-            "500": {
-              "slidesPerView": 3
-            },
-            "650": {
-              "slidesPerView": 4
-            },
-            "900": {
-              "slidesPerView": 5
-            },
-            "1100": {
-              "slidesPerView": 6
-            }
-          }
-        }'>
-          <div class="swiper-wrapper">
 
-            <!-- Item -->
-            <div class="swiper-slide">
-              <div class="position-relative text-center border-end mx-n1">
-                <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-lg stretched-link" aria-label="Facebook">
-                  <i class="bx bxl-facebook"></i>
-                </a>
-                <div class="pt-4">
-                  <h6 class="mb-1">Facebook</h6>
-                  <p class="fs-sm text-muted mb-0">silicon</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide">
-              <div class="position-relative text-center border-end mx-n1">
-                <a href="#" class="btn btn-icon btn-secondary btn-instagram btn-lg stretched-link" aria-label="Instagram">
-                  <i class="bx bxl-instagram"></i>
-                </a>
-                <div class="pt-4">
-                  <h6 class="mb-1">Instagram</h6>
-                  <p class="fs-sm text-muted mb-0">@silicon</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide">
-              <div class="position-relative text-center border-end mx-n1">
-                <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-lg stretched-link" aria-label="Twitter">
-                  <i class="bx bxl-twitter"></i>
-                </a>
-                <div class="pt-4">
-                  <h6 class="mb-1">Twitter</h6>
-                  <p class="fs-sm text-muted mb-0">@silicon</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide">
-              <div class="position-relative text-center border-end mx-n1">
-                <a href="https://www.linkedin.com/in/debora-barbato-81b2113b" class="btn btn-icon btn-secondary btn-linkedin btn-lg stretched-link" aria-label="LinkedIn">
-                  <i class="bx bxl-linkedin"></i>
-                </a>
-                <div class="pt-4">
-                  <h6 class="mb-1">LinkedIn</h6>
-                  <p class="fs-sm text-muted mb-0">Debora Barbato</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide">
-              <div class="position-relative text-center border-end mx-n1">
-                <a href="#" class="btn btn-icon btn-secondary btn-youtube btn-lg stretched-link" aria-label="Twitter">
-                  <i class="bx bxl-youtube"></i>
-                </a>
-                <div class="pt-4">
-                  <h6 class="mb-1">YouTube</h6>
-                  <p class="fs-sm text-muted mb-0">Silicon</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide">
-              <div class="position-relative text-center border-end mx-n1">
-                <a href="#" class="btn btn-icon btn-secondary btn-dribbble btn-lg stretched-link" aria-label="Dribbble">
-                  <i class="bx bxl-dribbble"></i>
-                </a>
-                <div class="pt-4">
-                  <h6 class="mb-1">Dribbble</h6>
-                  <p class="fs-sm text-muted mb-0">Silicon</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pagination (bullets) -->
-          <div class="swiper-pagination position-relative bottom-0 pt-3 mt-4"></div>
-        </div>
-      </section>
     </main>
 
 
@@ -610,10 +503,11 @@
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+              <img src="assets/img/feather-logo-white.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
               Debs.ink
             </div>
             <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>
+            <!-- SUBSCRIPTION FORM COMMENTED OUT - CAN BE REACTIVATED LATER
             <form class="needs-validation" novalidate>
               <label for="subscr-email" class="form-label">Subscribe to content design insights</label>
               <div class="input-group">
@@ -623,6 +517,7 @@
                 <button type="submit" class="btn btn-primary">Subscribe</button>
               </div>
             </form>
+            -->
           </div>
           <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
             <div id="footer-links" class="row">

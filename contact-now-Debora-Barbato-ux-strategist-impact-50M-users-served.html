@@ -12,11 +12,12 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
+    <!-- Theme switcher (color modes) - COMMENTED OUT TO LOCK IN LIGHT MODE -->
+    <!-- <script src="assets/js/theme-switcher.js"></script> -->
 
     <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon-dark-bg.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-dark-bg.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
@@ -149,7 +150,7 @@
       <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+            <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
             Debs.ink
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -178,11 +179,11 @@
               </a>
             </div>      
           </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-            <input type="checkbox" class="form-check-input" id="theme-mode">
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+          <!-- Theme switcher - COMMENTED OUT TO LOCK IN LIGHT MODE -->
+          <!-- <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">Light</label>
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-          </div>
+          </div> -->
           <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -221,10 +222,10 @@
                   <div class="ps-3 ps-sm-4">
                     <h2 class="h4 pb-1 mb-2">Email Debora</h2>
                     <p class="mb-2">Please feel free to drop Debora a line. She will respond as soon as possible.</p>
-                    <div class="btn btn-link btn-lg px-0">
-                      Leave a message for Debora
-                      <i class="bx bx-right-arrow-alt lead ms-2"></i>
-                    </div>
+                    <a href="mailto:de.barbatosf@gmail.com" class="btn btn-link btn-lg px-0 text-decoration-none">
+                      Click here to send an email
+                      <!-- <i class="bx bx-right-arrow-alt lead ms-2"></i> -->
+                    </a>
                   </div>
                 </div>
                 <div class="d-flex align-items-start">
@@ -235,7 +236,7 @@
                     <h2 class="h4 pb-1 mb-2">Collaboration</h2>
                     <p class="mb-2">Interested in working together on content design projects? Let's discuss opportunities.</p>
                     <div class="btn btn-link btn-lg px-0">
-                      Discuss collaboration
+                      Pick a time from the calendar
                       <i class="bx bx-right-arrow-alt lead ms-2"></i>
                     </div>
                   </div>
@@ -243,50 +244,15 @@
               </div>
             </div>
 
-            <!-- Contact form -->
+            <!-- Calendly Booking -->
             <div class="col-xl-6 col-lg-7 offset-xl-2">
               <div class="card border-light shadow-lg py-3 p-sm-4 p-md-5">
-                <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
-                <div class="card-body position-relative zindex-2">
-                  <h2 class="card-title pb-3 mb-4">Get Content Design Consultation</h2>
-                  <form class="row g-4 needs-validation" novalidate>
-                    <div class="col-12">
-                      <label for="fn" class="form-label fs-base">Full name</label>
-                      <input type="text" class="form-control form-control-lg" id="fn" required>
-                      <div class="invalid-feedback">Please enter your full name!</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="email" class="form-label fs-base">Email address</label>
-                      <input type="email" class="form-control form-control-lg" id="email" required>
-                      <div class="invalid-feedback">Please provid a valid email address!</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="specialist" class="form-label fs-base">Service Type</label>
-                      <select class="form-select form-select-lg" id="specialist" required>
-                        <option value="" selected disabled>Choose a service</option>
-                        <option value="Content Design">Content Design</option>
-                        <option value="UX Writing">UX Writing</option>
-                        <option value="Content Strategy">Content Strategy</option>
-                        <option value="AI/ML Content">AI/ML Content</option>
-                        <option value="Mobile App Content">Mobile App Content</option>
-                        <option value="Content Audit">Content Audit</option>
-                      </select>
-                      <div class="invalid-feedback">Choose a service from the list!</div>
-                    </div>
-                    <div class="col-sm-6">
-                      <label for="date" class="form-label fs-base">Preferred Date</label>
-                      <input type="text" class="form-control form-control-lg" id="date" data-format='{"date": true, "datePattern": ["m", "d"]}' placeholder="mm/dd" required>
-                      <div class="invalid-feedback">Enter a preferred date!</div>
-                    </div>
-                    <div class="col-sm-6">
-                      <label for="time" class="form-label fs-base">Preferred Time</label>
-                      <input type="text" class="form-control form-control-lg" id="time" data-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" required>
-                      <div class="invalid-feedback">Enter a preferred time!</div>
-                    </div>
-                    <div class="col-12 pt-2 pt-sm-3">
-                      <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Send Message to Debora</button>
-                    </div>
-                  </form>
+                <div class="card-body">
+                  <h2 class="card-title pb-3 mb-4">Book a Content Design Consultation</h2>
+                  <p class="text-muted mb-4">Pick a time that works for you and let's discuss your content design needs.</p>
+                  <!-- Calendly inline widget -->
+                  <div class="calendly-inline-widget" data-url="https://calendly.com/de-barbatosf/30min" style="min-width:320px;height:700px;"></div>
+                  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 </div>
               </div>
             </div>
@@ -307,10 +273,11 @@
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+              <img src="assets/img/feather-logo-white.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
               Debs.ink
             </div>
             <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>
+            <!-- SUBSCRIPTION FORM COMMENTED OUT - CAN BE REACTIVATED LATER
             <form class="needs-validation" novalidate>
               <label for="subscr-email" class="form-label">Subscribe to content design insights</label>
               <div class="input-group">
@@ -320,6 +287,7 @@
                 <button type="submit" class="btn btn-primary">Subscribe</button>
               </div>
             </form>
+            -->
           </div>
           <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
             <div id="footer-links" class="row">

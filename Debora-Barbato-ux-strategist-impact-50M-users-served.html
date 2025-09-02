@@ -11,11 +11,12 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
+    <!-- Theme switcher (color modes) - COMMENTED OUT TO LOCK IN LIGHT MODE -->
+    <!-- <script src="assets/js/theme-switcher.js"></script> -->
 
     <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon-dark-bg.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-dark-bg.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
@@ -148,7 +149,7 @@
       <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+            <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
             Debs.ink
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -177,11 +178,12 @@
               </a>
             </div>      
           </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <!-- Theme switcher - COMMENTED OUT TO LOCK IN LIGHT MODE -->
+          <!-- <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-          </div>
+          </div> -->
           <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -199,14 +201,15 @@
           <li class="breadcrumb-item">
             <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Portfolio List View</li>
+          <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
         </ol>
       </nav>
 
 
       <!-- Page title + filters -->
       <section class="container d-sm-flex align-items-center justify-content-between pb-4 mb-2 mb-lg-3">
-        <h1 class="mb-sm-0 me-sm-3">Portfolio List</h1>
+        <h1 class="mb-sm-0 me-sm-3">50M Users / 10Y of work</h1>
+        <!-- Categories dropdown - commented out for easy reactivation
         <select class="form-select" style="width: 240px;">
           <option value="All categories">All categories</option>
           <option value="Content Design">Content Design</option>
@@ -215,6 +218,7 @@
           <option value="AI/ML">AI/ML</option>
           <option value="Mobile Design">Mobile Design</option>
         </select>
+        -->
       </section>
 
 
@@ -224,7 +228,7 @@
         <!-- Item -->
         <div class="row pb-5 mb-md-4 mb-lg-5">
           <div class="rellax col-md-6 pb-1 mb-3 pb-md-0 mb-md-0" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="md">
-            <a href="portfolio-single-project.html">
+            <a href="Chase-mobile-customer-support-experience.html">
               <img src="assets/img/portfolio/list/01.jpg" class="rounded-3" width="600" alt="Chase Mobile Customer Support Experience">
             </a>
           </div>
@@ -234,7 +238,7 @@
               <h2 class="h3">Chase Mobile Customer Support Experience</h2>
               <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">Information Architecture</a>
               <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">Led the information architecture redesign of Chase's mobile customer support experience, resulting in a 35% reduction in call volume (90,000 fewer calls per month) and $3M annual savings. Collaborated with Design System, UX researchers, and cross-product teams to establish efficient workflows and processes. Increased engagement with the Snapshot feature by over 10% through user-centric content strategies.</p>
-              <a href="portfolio-single-project.html" class="btn btn-outline-primary">View more</a>
+              <a href="Chase-mobile-customer-support-experience.html" class="btn btn-outline-primary">View more</a>
             </div>
           </div>
         </div>
@@ -242,7 +246,7 @@
         <!-- Item -->
         <div class="row pb-5 mb-md-4 mb-lg-5">
           <div class="rellax col-md-6 order-md-2 pb-1 mb-3 pb-md-0 mb-md-0" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="md">
-            <a href="portfolio-single-project.html" class="float-md-end">
+            <a href="Chase-more-menu-information-architecture.html" class="float-md-end">
               <img src="assets/img/portfolio/list/02.jpg" class="rounded-3" width="600" alt="Chase More Menu Information Architecture">
             </a>
           </div>
@@ -252,7 +256,7 @@
               <h2 class="h3">Chase "More" Menu Information Architecture</h2>
               <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">Mobile Design</a>
               <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">Revamped the "More" menu information architecture using user research and iterative design, boosting experience engagement by 124% and reducing bounce rate by 3%. Collaborated with researchers to prototype and test content early, ensuring seamless, validated user interactions. This focused redesign significantly improved user navigation and feature discovery within the Chase mobile app.</p>
-              <a href="portfolio-single-project.html" class="btn btn-outline-primary">View more</a>
+              <a href="Chase-more-menu-information-architecture.html" class="btn btn-outline-primary">View more</a>
             </div>
           </div>
         </div>
@@ -260,7 +264,7 @@
                         <!-- Item -->
         <div class="row pb-5 mb-md-4 mb-lg-5">
           <div class="rellax col-md-6 pb-1 mb-3 pb-md-0 mb-md-0" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="md">
-            <a href="portfolio-single-project.html">
+            <a href="Yahoo-AI-UX-editor-for-ads.html">
               <img src="assets/img/portfolio/list/03.jpg" class="rounded-3" width="600" alt="Yahoo AI-UX Editor for Ads">
             </a>
           </div>
@@ -270,7 +274,7 @@
               <h2 class="h3">Yahoo AI-UX Editor for Ads</h2>
               <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">AI/ML</a>
               <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">Automated analysis of over 1,000 weekly ads using ML pipelines, reducing manual processing time by 70% while maintaining data quality. Trained LLM models with curated datasets, improving model accuracy by 25%. Delivered Yahoo Italia's news feeds to 5M+ daily users with clear, jargon-free language. Crafted microcopy for AI-powered features, reducing user confusion by 40%.</p>
-              <a href="portfolio-single-project.html" class="btn btn-outline-primary">View more</a>
+              <a href="Yahoo-AI-UX-editor-for-ads.html" class="btn btn-outline-primary">View more</a>
             </div>
           </div>
         </div>
@@ -278,7 +282,7 @@
                 <!-- Item -->
         <div class="row pb-5 mb-md-4 mb-lg-5">
           <div class="rellax col-md-6 order-md-2 pb-1 mb-3 pb-md-0 mb-md-0" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="md">
-            <a href="portfolio-single-project.html" class="float-md-end">
+            <a href="AllTrails-content-design-and-data-quality.html" class="float-md-end">
               <img src="assets/img/portfolio/list/04.jpg" class="rounded-3" width="600" alt="AllTrails Content Design & Data Quality">
             </a>
           </div>
@@ -288,7 +292,7 @@
               <h2 class="h3">AllTrails Content Design & Data Quality</h2>
               <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">Content Design</a>
               <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">Proofread and edited 100+ weekly texts with 99.5% accuracy, establishing content moderation workflows to identify potential harmful AI outputs. Delivered Yahoo Italia's news feeds with clear, jargon-free language to 5M+ daily users, transforming complex information into accessible, conversational interfaces. Crafted microcopy and UX writing for AI-powered features, balancing clarity with personality to build user trust.</p>
-              <a href="portfolio-single-project.html" class="btn btn-outline-primary">View more</a>
+              <a href="AllTrails-content-design-and-data-quality.html" class="btn btn-outline-primary">View more</a>
             </div>
           </div>
         </div>
@@ -327,10 +331,11 @@
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.svg" width="47" alt="Debs.ink">
+              <img src="assets/img/feather-logo-white.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
               Debs.ink
             </div>
             <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>
+            <!-- SUBSCRIPTION FORM COMMENTED OUT - CAN BE REACTIVATED LATER
             <form class="needs-validation" novalidate>
               <label for="subscr-email" class="form-label">Subscribe to content design insights</label>
               <div class="input-group">
@@ -340,6 +345,7 @@
                 <button type="submit" class="btn btn-primary">Subscribe</button>
               </div>
             </form>
+            -->
           </div>
           <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
             <div id="footer-links" class="row">
