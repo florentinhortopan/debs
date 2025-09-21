@@ -111,6 +111,59 @@
           transform: rotate(360deg);
         }
       }
+
+      /* Animated gradient styles for footer */
+      .animated-gradient-link {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none !important;
+        animation: gradient-shift 6s ease-in-out infinite;
+        transition: all 0.3s ease;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+        color: transparent !important;
+      }
+      
+      .animated-gradient-link:hover {
+        animation-duration: 1s;
+        transform: scale(1.1);
+        text-decoration: none !important;
+        opacity: 1 !important;
+      }
+      
+      .animated-heart {
+        background: linear-gradient(45deg, #ff6b6b, #ff9ff3, #54a0ff, #4ecdc4);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-shift 2s ease-in-out infinite;
+        display: inline-block;
+        transition: all 0.3s ease;
+        opacity: 1 !important;
+        font-size: 1.2em;
+      }
+      
+      .animated-heart:hover {
+        animation-duration: 0.5s;
+        transform: scale(1.3);
+        opacity: 1 !important;
+      }
+      
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
     </style>
 
     <!-- Page loading scripts -->
@@ -236,13 +289,13 @@
             </div>
             <div class="d-sm-flex d-md-none d-lg-flex justify-content-center justify-content-md-start mt-auto pt-3 pt-md-0">
               <div class="d-flex align-items-center w-100 pe-xxl-2 mb-2 mb-md-0">
-                <div class="h1 mb-0">23k+</div>
-                <div class="ps-2 ms-1">downloads of the application</div>
+                <div class="h1 mb-0">★4.8</div>
+                <div class="ps-2 ms-1">• 8.3M Ratings</div>
               </div>
               <div class="vr d-none d-sm-block text-border my-2 mx-4"></div>
               <div class="d-flex align-items-center w-100 ps-xxl-2">
-                <div class="h1 mb-0">13b+</div>
-                <div class="ps-2 ms-1">trading volume per every day</div>
+                <div class="h1 mb-0">54M</div>
+                <div class="ps-2 ms-1">daily users</div>
               </div>
             </div>
           </div>
@@ -250,108 +303,6 @@
       </section>
 
 
-      <!-- Stats -->
-      <section class="bg-dark position-relative pt-5 pb-4 py-md-5" data-bs-theme="dark">
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary"></div>
-        <div class="container position-relative zindex-3 py-lg-4 pt-md-2 py-xl-5 mb-lg-4">
-
-          <!-- Title -->
-          <div class="row justify-content-center text-center pb-4 mb-2">
-            <div class="col-xl-6 pt-2">
-              <h2 class="h1 mb-4">Buy crypto at true cost</h2>
-              <p class="text-body fs-lg mb-0">Egestas ullamcorper posuere tortor eget netus elementum dui eu cras eros accumsan, ullamcorper tortor gula dui in netus</p>
-            </div>
-          </div>
-
-          <!-- Table -->
-          <div class="d-sm-flex flex-wrap d-lg-table w-100">
-  
-            <!-- Row -->
-            <div class="d-lg-table-row w-sm-50 w-lg-100 pe-sm-3 pe-lg-0 mb-3 mb-lg-0">
-              <div class="d-lg-table-cell align-middle border-bottom py-3 py-lg-4">
-                <div class="d-flex align-items-center">
-                  <img src="assets/img/landing/app-showcase-2/crypto/btc.png" width="32" alt="Bitcoin">
-                  <div class="ps-3">
-                    <h3 class="h4 mb-0">Bitcoin<span class="d-inlin-block opacity-60 ps-2 ms-1">BTC</span></h3>
-                  </div>
-                </div>
-              </div>
-              <div class="d-lg-table-cell align-middle h4 border-bottom py-3 py-lg-4 mb-0">$38,940.63</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-success border-bottom py-3 py-lg-4">+1.70%</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-white border-bottom py-3 py-lg-4">$736,124,602,670.97</div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg py-3 py-lg-4">
-                <img src="assets/img/landing/app-showcase-2/crypto/graphs/btc.svg" width="108" alt="BTC graph">
-              </div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg text-lg-end pt-2 pb-3 py-lg-4">
-                <button type="button" class="btn btn-sm btn-outline-secondary fs-sm w-100 w-lg-auto">Trade</button>
-              </div>
-            </div>
-  
-            <!-- Row -->
-            <div class="d-lg-table-row w-sm-50 w-lg-100 ps-sm-3 ps-lg-0 mb-3 mb-lg-0">
-              <div class="d-lg-table-cell align-middle border-bottom py-3 py-lg-4">
-                <div class="d-flex align-items-center">
-                  <img src="assets/img/landing/app-showcase-2/crypto/usdt.png" width="32" alt="Tether">
-                  <div class="ps-3">
-                    <h3 class="h4 mb-0">Tether<span class="d-inlin-block opacity-60 ps-2 ms-1">USDT</span></h3>
-                  </div>
-                </div>
-              </div>
-              <div class="d-lg-table-cell align-middle h4 border-bottom py-3 py-lg-4 mb-0">$15.09</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-danger border-bottom py-3 py-lg-4">-0.27%</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-white border-bottom py-3 py-lg-4">$14,735,584,883.68</div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg py-3 py-lg-4">
-                <img src="assets/img/landing/app-showcase-2/crypto/graphs/usdt.svg" width="108" alt="USDT graph">
-              </div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg text-lg-end pt-2 pb-3 py-lg-4">
-                <button type="button" class="btn btn-sm btn-outline-secondary fs-sm w-100 w-lg-auto">Trade</button>
-              </div>
-            </div>
-  
-            <!-- Row -->
-            <div class="d-lg-table-row w-sm-50 w-lg-100 pe-sm-3 pe-lg-0 mb-3 mb-lg-0">
-              <div class="d-lg-table-cell align-middle border-bottom py-3 py-lg-4">
-                <div class="d-flex align-items-center">
-                  <img src="assets/img/landing/app-showcase-2/crypto/eth.png" width="32" alt="Ethereum">
-                  <div class="ps-3">
-                    <h3 class="h4 mb-0">Ethereum<span class="d-inlin-block opacity-60 ps-2 ms-1">ETH</span></h3>
-                  </div>
-                </div>
-              </div>
-              <div class="d-lg-table-cell align-middle h4 border-bottom py-3 py-lg-4 mb-0">$2,829.07</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-success border-bottom py-3 py-lg-4">+1.27%</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-white border-bottom py-3 py-lg-4">$337,863,906,048.53</div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg py-3 py-lg-4">
-                <img src="assets/img/landing/app-showcase-2/crypto/graphs/eth.svg" width="108" alt="ETH graph">
-              </div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg text-lg-end pt-2 pb-3 py-lg-4">
-                <button type="button" class="btn btn-sm btn-outline-secondary fs-sm w-100 w-lg-auto">Trade</button>
-              </div>
-            </div>
-  
-            <!-- Row -->
-            <div class="d-lg-table-row w-sm-50 w-lg-100 ps-sm-3 ps-lg-0 mb-3 mb-lg-0">
-              <div class="d-lg-table-cell align-middle border-bottom py-3 py-lg-4">
-                <div class="d-flex align-items-center">
-                  <img src="assets/img/landing/app-showcase-2/crypto/dot.png" width="32" alt="Polkadot">
-                  <div class="ps-3">
-                    <h3 class="h4 mb-0">Polkadot<span class="d-inlin-block opacity-60 ps-2 ms-1">DOT</span></h3>
-                  </div>
-                </div>
-              </div>
-              <div class="d-lg-table-cell align-middle h4 border-bottom py-3 py-lg-4 mb-0">$13.28</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-danger border-bottom py-3 py-lg-4">-1.35%</div>
-              <div class="d-lg-table-cell align-middle fs-lg text-white border-bottom py-3 py-lg-4">$26,143,724,006.81</div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg py-3 py-lg-4">
-                <img src="assets/img/landing/app-showcase-2/crypto/graphs/dot.svg" width="108" alt="DOT graph">
-              </div>
-              <div class="d-lg-table-cell align-middle border-bottom-lg text-lg-end pt-2 pb-3 py-lg-4">
-                <button type="button" class="btn btn-sm btn-outline-secondary fs-sm w-100 w-lg-auto">Trade</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- Features -->
@@ -359,47 +310,47 @@
         <div class="row align-items-center align-items-xl-end py-2 pb-sm-3">
           <div class="col-md-6 mb-5 mb-md-0">
             <div style="max-width: 570px;">
-              <h2 class="h1 pb-3 mb-2 mb-md-3">Get possibilities for better trading with Silicon</h2>
+              <h2 class="h1 pb-3 mb-2 mb-md-3">Background</h2>
               <div class="row row-cols-1 row-cols-sm-2 gx-lg-5 g-4">
                 <div class="col d-md-flex d-xl-block align-items-center pt-1 pt-sm-2 pt-md-0 pt-xl-3">
                   <div class="d-table bg-secondary rounded flex-shrink-0 p-2 mb-3 me-md-3 me-xl-0">
-                    <img src="assets/img/landing/app-showcase-2/features/payments.svg" width="19" class="d-block m-1" alt="Icon">
+                    <i class="bx bx-error-circle text-primary" style="font-size: 1.5rem;"></i>
                   </div>
                   <h3 class="h5 pb-sm-1 mb-2">
-                    <span class="d-md-none d-xl-block">Top Up Account Easily</span>
-                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Top Up Account Easily</span>
+                    <span class="d-md-none d-xl-block">Problem</span>
+                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Problem</span>
                   </h3>
-                  <p class="fs-sm mb-0 d-md-none d-xl-block">Mollis consectetur congue egestas egestas suspendisse blandit proin volutpat mollis egestas in ultrices.</p>
+                  <p class="fs-sm mb-0 d-md-none d-xl-block">Our banking app needed navigation balancing quick access to specific services with discovery of valuable hidden features.</p>
                 </div>
                 <div class="col d-md-flex d-xl-block align-items-center pt-1 pt-sm-2 pt-md-0 pt-xl-3">
                   <div class="d-table bg-secondary rounded flex-shrink-0 p-2 mb-3 me-md-3 me-xl-0">
-                    <img src="assets/img/landing/app-showcase-2/features/cashback.svg" width="19" class="d-block m-1" alt="Icon">
+                    <i class="bx bx-check-circle text-primary" style="font-size: 1.5rem;"></i>
                   </div>
                   <h3 class="h5 pb-sm-1 mb-2">
-                    <span class="d-md-none d-xl-block">Regular Cashback</span>
-                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Regular Cashback</span>
+                    <span class="d-md-none d-xl-block">Solution</span>
+                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Solution</span>
                   </h3>
-                  <p class="fs-sm mb-0 d-md-none d-xl-block">Id mollis consectetur congue egestas egestas suspendisse blandit justo lorem ipsum dolor sit amet, consectetur elit.</p>
+                  <p class="fs-sm mb-0 d-md-none d-xl-block">Through iterative design cycles, user research insights and A/B testing validation, we optimized the IA to effectively solve navigation challenges.</p>
                 </div>
                 <div class="col d-md-flex d-xl-block align-items-center pt-1 pt-sm-2 pt-md-0 pt-xl-3">
                   <div class="d-table bg-secondary rounded flex-shrink-0 p-2 mb-3 me-md-3 me-xl-0">
-                    <img src="assets/img/landing/app-showcase-2/features/statistics.svg" width="19" class="d-block m-1" alt="Icon">
+                    <i class="bx bx-target-lock text-primary" style="font-size: 1.5rem;"></i>
                   </div>
                   <h3 class="h5 pb-sm-1 mb-2">
-                    <span class="d-md-none d-xl-block">Cost Statistics</span>
-                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Cost Statistics</span>
+                    <span class="d-md-none d-xl-block">Challenge</span>
+                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Challenge</span>
                   </h3>
-                  <p class="fs-sm mb-0 d-md-none d-xl-block">Congue fames odio tincidunt mus. Eleifend in at arcu id sit scelerisque in. Elit quis sem dictum non turpis eget.</p>
+                  <p class="fs-sm mb-0 d-md-none d-xl-block">Designing navigation that meets immediate customer needs while strategically surfacing business-priority features to drive engagement and revenue growth.</p>
                 </div>
                 <div class="col d-md-flex d-xl-block align-items-center pt-1 pt-sm-2 pt-md-0 pt-xl-3">
                   <div class="d-table bg-secondary rounded flex-shrink-0 p-2 mb-3 me-md-3 me-xl-0">
-                    <img src="assets/img/landing/app-showcase-2/features/security.svg" width="19" class="d-block m-1" alt="Icon">
+                    <i class="bx bx-trending-up text-primary" style="font-size: 1.5rem;"></i>
                   </div>
                   <h3 class="h5 pb-sm-1 mb-2">
-                    <span class="d-md-none d-xl-block">Data Security</span>
-                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Data Security</span>
+                    <span class="d-md-none d-xl-block">Results</span>
+                    <span class="fs-base text-nav d-none d-md-block d-xl-none">Results</span>
                   </h3>
-                  <p class="fs-sm mb-0 d-md-none d-xl-block">Vulputate commodo tincidunt risus ac odio cursus morbi ipsum ut in laoreet fermentum condimentum.</p>
+                  <p class="fs-sm mb-0 d-md-none d-xl-block">Achieved 124% increase in menu interactions and reduced bounce rate by 3%, demonstrating improved navigation effectiveness and user satisfaction.</p>
                 </div>
               </div>
             </div>
@@ -413,11 +364,282 @@
       </section>
 
 
+      <!-- MVP Design Section -->
+      <section class="container py-5 my-1 my-md-4 my-lg-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="pe-lg-4">
+              <h2 class="h1 mb-4">Design for MVP</h2>
+              <p class="fs-lg mb-4">Initial information architecture based on Jobs-to-be-Done (JTBD) framework, user research insights, and first design iteration.</p>
+              
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="d-flex align-items-start">
+                    <div class="d-inline-flex bg-primary bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                      <i class="bx bx-target-lock text-primary fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-2">JTBD Information Architecture</h4>
+                      <p class="mb-0 fs-sm">Categorized user tasks into Primary Core (Pay & Transfer) and Engagement (Rewards & Shopping) JTBDs for strategic placement.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="d-flex align-items-start">
+                    <div class="d-inline-flex bg-success bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                      <i class="bx bx-search-alt-2 text-success fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-2">User Research</h4>
+                      <p class="mb-0 fs-sm">Analyzed user behavior patterns and navigation preferences to identify optimization opportunities.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="d-flex align-items-start">
+                    <div class="d-inline-flex bg-warning bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                      <i class="bx bx-edit text-warning fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-2">First Design Iteration</h4>
+                      <p class="mb-0 fs-sm">Created initial menu structure with main categories: Pay & Transfer, Self-service, Travel & Redeem, Statements, Lock/Unlock Card, and More.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <div class="bg-gradient-primary position-absolute start-0 bottom-0 w-100 rounded-3 opacity-10" style="height: 90%;"></div>
+              <img src="assets/img/landing/app-showcase-2/stats.jpg" class="d-block rounded-3 position-relative zindex-2" alt="MVP Design Process">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Initial IA Full Bleed Image -->
+      <section class="py-5">
+        <div class="container-fluid px-0">
+          <img src="assets/img/landing/app-showcase-2/Initial-IA.png" class="w-100 d-block" alt="Initial Information Architecture">
+        </div>
+      </section>
+
+
+      <!-- Data-Driven Strategy & Optimization Section -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <div class="row pb-4 mb-2">
+            <div class="col-xl-8 pt-2">
+              <h2 class="h1 mb-4">Data-Driven Strategy & Optimization</h2>
+              <p class="fs-lg mb-0">Transformed insights into action through <strong>systematic data collection</strong>, <strong>strategic iteration</strong>, and <strong>cognitive load reduction</strong>.</p>
+            </div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <div class="d-inline-flex bg-info bg-opacity-10 rounded-circle p-3 mb-3">
+                    <i class="bx bx-data text-info fs-4"></i>
+                  </div>
+                  <h3 class="h5 mb-3">Collect & Analyze</h3>
+                  <p class="mb-3">Menu was mainly used to access <strong>servicing and travel features</strong>.</p>
+                  <ul class="list-unstyled mb-0">
+                    <li class="d-flex align-items-center mb-2">
+                      <i class="bx bx-check text-success me-2"></i>
+                      <span class="fs-sm"><strong>Pay & transfer</strong> had the <strong>highest access rate</strong></span>
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                      <i class="bx bx-check text-success me-2"></i>
+                      <span class="fs-sm"><strong>Self-service & Travel & redeem</strong> had the <strong>highest lift</strong></span>
+                    </li>
+                    <li class="d-flex align-items-center mb-0">
+                      <i class="bx bx-check text-success me-2"></i>
+                      <span class="fs-sm"><strong>Statements & Lock/unlock card</strong> had the <strong>highest CTR</strong></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <div class="d-inline-flex bg-warning bg-opacity-10 rounded-circle p-3 mb-3">
+                    <i class="bx bx-refresh text-warning fs-4"></i>
+                  </div>
+                  <h3 class="h5 mb-3">Iterate & Optimize</h3>
+                  <p class="mb-3"><strong>Servicing and travel sections</strong> moved to the top based on <strong>data insights</strong>.</p>
+                  <ul class="list-unstyled mb-0">
+                    <li class="d-flex align-items-center mb-2">
+                      <i class="bx bx-check text-success me-2"></i>
+                      <span class="fs-sm"><strong>Self-service section</strong> moved at the top for <strong>faster findability</strong></span>
+                    </li>
+                    <li class="d-flex align-items-center mb-2">
+                      <i class="bx bx-check text-success me-2"></i>
+                      <span class="fs-sm"><strong>Travel section</strong> moved above the fold for <strong>simpler discovery</strong></span>
+                    </li>
+                    <li class="d-flex align-items-center mb-0">
+                      <i class="bx bx-check text-success me-2"></i>
+                      <span class="fs-sm"><strong>Pay & transfer</strong> moved below the fold to <strong>learn customer dependency</strong></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <div class="d-inline-flex bg-primary bg-opacity-10 rounded-circle p-3 mb-3">
+                    <i class="bx bx-text text-primary fs-4"></i>
+                  </div>
+                  <h3 class="h5 mb-3">Simplify Language</h3>
+                  <p class="mb-0">I simplified labels by <strong>removing unnecessary verbs and redundant words</strong> that create <strong>visual clutter without providing value</strong>.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <div class="d-inline-flex bg-success bg-opacity-10 rounded-circle p-3 mb-3">
+                    <i class="bx bx-list-ul text-success fs-4"></i>
+                  </div>
+                  <h3 class="h5 mb-3">Reduce Options</h3>
+                  <p class="mb-0">Through <strong>data analysis and app auditing</strong>, I eliminated the Pay & Transfer section, <strong>reducing customer choices without impacting stakeholders</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Label Optimization Examples Section -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <div class="row pb-4 mb-2">
+            <div class="col-xl-8 pt-2">
+              <h2 class="h1 mb-4">Label Optimization Examples</h2>
+              <p class="fs-lg mb-0"><strong>Strategic content simplification</strong> to <strong>reduce cognitive load</strong> and <strong>improve user experience</strong>.</p>
+            </div>
+          </div>
+          
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <div class="table-responsive">
+                    <table class="table table-borderless mb-0">
+                      <thead>
+                        <tr>
+                          <th class="border-0 pb-3">
+                            <div class="d-flex align-items-center">
+                              <div class="bg-danger bg-opacity-10 rounded-circle p-2 me-3">
+                                <i class="bx bx-x text-danger fs-5"></i>
+                              </div>
+                              <span class="h5 mb-0 text-danger fw-bold">Before</span>
+                            </div>
+                          </th>
+                          <th class="border-0 pb-3">
+                            <div class="d-flex align-items-center">
+                              <div class="bg-success bg-opacity-10 rounded-circle p-2 me-3">
+                                <i class="bx bx-check text-success fs-5"></i>
+                              </div>
+                              <span class="h5 mb-0 text-success fw-bold">After</span>
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">Manage digital wallets</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Digital wallet</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">See stored cards</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Stored cards</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">See statement</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Statements</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">See Chase Offers</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Chase Offers</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">Get cash back</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Cash back</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">Buy gift cards</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Gift cards</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">Trip planning</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Trips</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm text-muted">Explore destinations</span>
+                          </td>
+                          <td class="py-2 border-0">
+                            <span class="fs-sm fw-semibold">Destinations</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       <!-- How it works (Slider) -->
-      <section class="container">
-        <div class="text-center pb-4 mb-3 mx-auto" style="max-width: 530px;">
-          <h2 class="h1">How Does It Work?</h2>
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit volutpat mollis egestas nam luctus facilisis ultrices</p>
+      <section class="container py-5" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(168, 85, 247, 0.02) 50%, rgba(236, 72, 153, 0.03) 100%); border-radius: 2rem;">
+        <div class="pb-4 mb-3">
+          <div class="col-xl-8">
+            <h2 class="h1 mb-4">How Does It Work?</h2>
+            <p class="fs-lg mb-0">The IA was carefully crafted by analyzing key <strong>Jobs-to-be-Done (JTBD)</strong> focused on <strong>findability</strong>, like Pay & transfer, alongside <strong>engagement JTBD</strong> aimed at <strong>discoverability</strong>, such as Track your finances. This <strong>strategic placement</strong> ensures these elements are <strong>front and center</strong> in the user interface.</p>
+          </div>
         </div>
         <div class="row align-items-center">
           <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
@@ -454,18 +676,23 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide" data-swiper-tab="#screen-1">
                     <div class="fs-xl text-muted mb-3 mb-lg-4">step 1</div>
-                    <h3 class="mb-lg-4">Create your account</h3>
-                    <p>Tellus est ullamcorper diam phasellus. Commodo acine pharetra quam lacinia fames quam nibh in elementum pulvinar consectetur adipiscing. Et viverra maecenas quis cras sed gravida volutpat, cursus enim enim ut nulla netus porta lacus.</p>
+                    <h3 class="mb-lg-4">Get Insights From Your Experiments</h3>
+                    <p>First experiment surprisingly showed us that beside the expected high engagement with Pay & transfer because at the top, the higher lift in terms of CTR was for another Promary Core JTBD - Self-service - and two of the Engagment sections - Redeem & shop and Travel & dining.</p>
+                    <p>Pay & Transfer feature shows high engagement, but its visibility in Bottom Navigation is prominent.</p>
+                    <p>Track your finances underperformed.</p>
+                    <p>The Click-Through Rates (CTRs) for Self-service, Redeem & shop, and Travel & dining experienced a notable increase.</p>
                   </div>
                   <div class="swiper-slide" data-swiper-tab="#screen-2">
                     <div class="fs-xl text-muted mb-3 mb-lg-4">step 2</div>
-                    <h3 class="mb-lg-4">Set up payment details</h3>
-                    <p>Ac condimentum a nisl sagittis, interdum. Et viverra maecenas quis cras sed gravida volutpat, cursus enim. Enim ut nulla netus porta lacus diam. Risus massa fames metus lectus diam maecenas dui. Nibh morbi id purus eget tellus diam.</p>
+                    <h3 class="mb-lg-4">Update Your Information Architecture</h3>
+                    <p>Following our review of the initial results from the first round, we restructured the categories according to the data showing which sections our users accessed most often.</p>
+                    <p>Following the initial experiment, it became evident that the categories of Self-service, Rewards & Shopping, and Travel & Dining have emerged as the primary focus areas.</p>
+                    <p>Pay & transfer category is now centrally located on the screen, next to Track your finances, improving the user experience for managing customer transactions.</p>
                   </div>
                   <div class="swiper-slide" data-swiper-tab="#screen-3">
                     <div class="fs-xl text-muted mb-3 mb-lg-4">step 3</div>
-                    <h3 class="mb-lg-4">Start trading</h3>
-                    <p>Risus massa fames metus lectus diam maecenas dui. Nibh morbi id purus eget tellus diam, integer blandit. Ac condimentum a nisl sagittis, interdum. Et viverra maecenas quis cras sed gravida volutpat, cursus enim. Enim ut nulla netus porta.</p>
+                    <h3 class="mb-lg-4">Work Hard On The Winning Variant</h3>
+                    <p> Following our review of the initial results from the first round, we restructured the categories according to the data showing which sections our users accessed most often. This resulted in a 124% increase in menu interactions and a 3% reduction in bounce rate.</p>
                   </div>
                 </div>
               </div>
@@ -485,219 +712,162 @@
       </section>
 
 
+      <!-- New IA Full Bleed Image -->
+      <section class="py-5">
+        <div class="container-fluid px-0">
+          <img src="assets/img/landing/app-showcase-2/New-IA.png" class="w-100 d-block" alt="New Information Architecture">
+        </div>
+      </section>
+
+
+      <!-- Process Section -->
+      <section class="bg-light py-5">
+        <div class="container">
+          <div class="row pb-4 mb-2">
+            <div class="col-xl-8 pt-2">
+              <h2 class="h1 mb-4">Information Architecture Process</h2>
+              <p class="fs-lg mb-0">A data-driven methodology that transforms user behavior insights into optimized navigation experiences.</p>
+            </div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <i class="bx bx-search-alt-2 h3 text-white mb-0"></i>
+                </div>
+                <h3 class="h5 mb-3">User Research & Analysis</h3>
+                <p class="mb-0">Analyze user behavior patterns, click-through rates, and navigation preferences to identify optimization opportunities.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <i class="bx bx-target-lock h3 text-white mb-0"></i>
+                </div>
+                <h3 class="h5 mb-3">Jobs-to-be-Done Mapping</h3>
+                <p class="mb-0">Categorize user tasks into Primary Core (Pay & Transfer) and Engagement (Rewards & Shopping) JTBDs for strategic placement.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <i class="bx bx-refresh h3 text-white mb-0"></i>
+                </div>
+                <h3 class="h5 mb-3">Iterative Design & Testing</h3>
+                <p class="mb-0">Create multiple IA variations and validate through A/B testing to optimize menu structure and user engagement.</p>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+              <div class="text-center">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 mb-3">
+                  <i class="bx bx-trending-up h3 text-white mb-0"></i>
+                </div>
+                <h3 class="h5 mb-3">Performance Optimization</h3>
+                <p class="mb-0">Monitor engagement metrics and refine the information architecture based on real user data and business outcomes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Implementation Section -->
+      <section class="container py-5 my-1 my-md-4 my-lg-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="pe-lg-4">
+              <h2 class="h1 mb-4">Implementation</h2>
+              <p class="fs-lg mb-4">After stakeholder alignment, we implemented the new structure and labeling system, deploying the finalized More menu.</p>
+              
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="d-flex align-items-start">
+                    <div class="d-inline-flex bg-success bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                      <i class="bx bx-check-circle text-success fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-2">Stakeholder Alignment</h4>
+                      <p class="mb-0 fs-sm">Secured buy-in from all stakeholders through data-driven presentations and clear business impact metrics.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="d-flex align-items-start">
+                    <div class="d-inline-flex bg-primary bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                      <i class="bx bx-rocket text-primary fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-2">Final Deployment</h4>
+                      <p class="mb-0 fs-sm">Launched the optimized More menu with improved information architecture and simplified labeling system.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="d-flex align-items-start">
+                    <div class="d-inline-flex bg-warning bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                      <i class="bx bx-trending-up text-warning fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-2">Measured Success</h4>
+                      <p class="mb-0 fs-sm">Achieved 124% increase in menu interactions and 3% reduction in bounce rate, validating our data-driven approach.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <div class="bg-gradient-primary position-absolute start-0 bottom-0 w-100 rounded-3 opacity-10" style="height: 90%;"></div>
+              <img src="assets/img/landing/app-showcase-2/stats.jpg" class="d-block rounded-3 position-relative zindex-2" alt="Final Implementation">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
       <!-- Testimonials -->
       <section class="container py-5 my-1 my-md-4 my-lg-5">
-        <div class="row pt-2 py-xl-3">
-          <div class="col-lg-3 col-md-4">
-            <h2 class="h1 text-center text-md-start mx-auto mx-md-0 pb-3 pb-sm-4 pb-md-0 pt-md-2" style="max-width: 300px;">What <br class="d-none d-md-inline">People Say <br class="d-none d-md-inline">About App:</h2>
-
-            <!-- Slider controls (Prev / next buttons) -->
-            <div class="d-none d-md-flex justify-content-center justify-content-md-start pb-4 mb-2 pt-2 pt-md-4 mt-md-5">
-              <button type="button" id="prev-testimonial" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
-                <i class="bx bx-chevron-left"></i>
-              </button>
-              <button type="button" id="next-testimonial" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
-                <i class="bx bx-chevron-right"></i>
-              </button>
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-8">
+            <div class="text-center mb-5">
+              <h2 class="h1 mb-4">J.D Power says...</h2>
             </div>
-          </div>
-          <div class="col-lg-9 col-md-8">
-            <div class="swiper mx-n2" data-swiper-options='{
-              "slidesPerView": 1,
-              "spaceBetween": 8,
-              "loop": true,
-              "navigation": {
-                "prevEl": "#prev-testimonial",
-                "nextEl": "#next-testimonial"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "clickable": true
-              },    
-              "breakpoints": {
-                "500": {
-                  "slidesPerView": 2
-                },
-                "1000": {
-                  "slidesPerView": 2
-                },
-                "1200": {
-                  "slidesPerView": 3
-                }
-              }
-            }'>
-              <div class="swiper-wrapper">
-  
-                <!-- Item -->
-                <div class="swiper-slide h-auto pt-4">
-                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
-                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i class="bx bxs-quote-left"></i>
-                      </span>
-                      <blockquote class="card-body pb-3 mb-0">
-                        <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
-                      </blockquote>
-                      <div class="card-footer border-0 text-nowrap pt-0">
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bx-star text-muted opacity-75"></i>
-                        <i class="bx bx-star text-muted opacity-75"></i>
-                      </div>
-                    </div>
-                    <figcaption class="ps-4 pt-4">
-                      <h6 class="fs-sm fw-semibold mb-0">Robert Fox</h6>
-                      <span class="fs-xs text-muted">Founder of Lorem Company</span>
-                    </figcaption>
-                  </figure>
-                </div>
-  
-                <!-- Item -->
-                <div class="swiper-slide h-auto pt-4">
-                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
-                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i class="bx bxs-quote-left"></i>
-                      </span>
-                      <blockquote class="card-body pb-3 mb-0">
-                        <p class="mb-0">Phasellus luctus nisi id orci condimentum, at cursus nisl vestibulum. Orci varius natoque penatibus et magnis dis parturient montes commodo.</p>
-                      </blockquote>
-                      <div class="card-footer border-0 text-nowrap pt-0">
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                      </div>
-                    </div>
-                    <figcaption class="ps-4 pt-4">
-                      <h6 class="fs-sm fw-semibold mb-0">Annette Black</h6>
-                      <span class="fs-xs text-muted">CEO of Ipsum Company</span>
-                    </figcaption>
-                  </figure>
-                </div>
-  
-                <!-- Item -->
-                <div class="swiper-slide h-auto pt-4">
-                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
-                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i class="bx bxs-quote-left"></i>
-                      </span>
-                      <blockquote class="card-body pb-3 mb-0">
-                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum odio, bibendum ornare mi at, efficitur urna.</p>
-                      </blockquote>
-                      <div class="card-footer border-0 text-nowrap pt-0">
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bx-star text-muted opacity-75"></i>
-                      </div>
-                    </div>
-                    <figcaption class="ps-4 pt-4">
-                      <h6 class="fs-sm fw-semibold mb-0">Jerome Bell</h6>
-                      <span class="fs-xs text-muted">Founder of the Agency </span>
-                    </figcaption>
-                  </figure>
-                </div>
-  
-                <!-- Item -->
-                <div class="swiper-slide h-auto pt-4">
-                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
-                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
-                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
-                        <i class="bx bxs-quote-left"></i>
-                      </span>
-                      <blockquote class="card-body pb-3 mb-0">
-                        <p class="mb-0">Pellentesque finibus congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
-                      </blockquote>
-                      <div class="card-footer border-0 text-nowrap pt-0">
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                        <i class="bx bxs-star text-warning"></i>
-                      </div>
-                    </div>
-                    <figcaption class="ps-4 pt-4">
-                      <h6 class="fs-sm fw-semibold mb-0">Albert Flores</h6>
-                      <span class="fs-xs text-muted">CEO of Dolor Ltd.</span>
-                    </figcaption>
-                  </figure>
+            
+            <div class="card border-0 shadow-lg p-5 position-relative">
+              <!-- Quote icon -->
+              <div class="text-center mb-4">
+                <div class="d-inline-flex bg-primary rounded-circle p-3 shadow-sm">
+                  <i class="bx bxs-quote-left text-white" style="font-size: 1.5rem;"></i>
                 </div>
               </div>
 
-              <!-- Pagination (bullets) -->
-              <div class="swiper-pagination position-relative d-md-none mt-5"></div>
+              <!-- Quote text -->
+              <blockquote class="text-center mb-4">
+                <p class="fs-lg fst-italic mb-0">"The introduction of a 'More Menu' enhances the findability of information and tools."</p>
+              </blockquote>
+              
+              <!-- Attribution -->
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="assets/img/landing/app-showcase-2/logo-J-D-Power.svg" alt="J.D. Power" width="100" class="me-3">
+                <div class="text-start">
+                  <h6 class="mb-1 fw-semibold">J.D. Power</h6>
+                  <span class="text-muted fs-sm">Banking Benchmark</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-
-      <!-- Download app CTA -->
-      <section class="bg-secondary pt-lg-4 pt-xl-5 overflow-hidden">
-        <div class="container pt-5">
-          <div class="row pt-2 pt-sm-3 pt-md-4">
-            <div class="col-md-6 col-xl-5 col-xxl-4 text-center text-md-start pb-4 pb-sm-5 mb-2 mb-md-3 mb-lg-4 mb-xl-5">
-              <h2 class="h1 mb-5">Download Our App for Any Devices:</h2>
-              <div class="d-flex d-md-block mt-n2 mt-sm-0">
-                <div class="row row-cols-1 row-cols-lg-2 align-items-lg-end me-1 me-md-0 pb-md-4 mb-md-3">
-                  <div class="col">
-                    <h3 class="fs-base fw-normal opacity-60 mb-2">App Store</h3>
-                    <div class="text-nowrap text-warning pb-1 mb-2">
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                    </div>
-                    <h4 class="mb-1">Editor's Choice</h4>
-                    <p class="mb-0">rating 4.7, 187K+ reviews</p>
-                  </div>
-                  <div class="col d-xl-flex justify-content-end">
-                    <a href="#" class="btn btn-dark btn-lg w-xl-100 px-3 py-2 ms-xl-3 mt-3 mt-lg-0">
-                      <img src="assets/img/market/appstore-light.svg" class="light-mode-img" width="124" alt="App Store">
-                      <img src="assets/img/market/appstore-dark.svg" class="dark-mode-img" width="124" alt="App Store">
-                    </a>
-                  </div>
-                </div>
-                <div class="row row-cols-1 row-cols-lg-2 align-items-lg-end">
-                  <div class="col">
-                    <h3 class="fs-base fw-normal opacity-60 mb-2">Google Play</h3>
-                    <div class="text-nowrap text-warning pb-1 mb-2">
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                      <i class="bx bxs-star"></i>
-                    </div>
-                    <h4 class="mb-1">App of the Day</h4>
-                    <p class="mb-0">rating 4.8, 30K+ reviews</p>
-                  </div>
-                  <div class="col d-xl-flex justify-content-end">
-                    <a href="#" class="btn btn-dark btn-lg w-xl-100 px-3 py-2 ms-xl-3 mt-3 mt-lg-0">
-                      <img src="assets/img/market/googleplay-light.svg" class="light-mode-img" width="139" alt="Google Play">
-                      <img src="assets/img/market/googleplay-dark.svg" class="dark-mode-img" width="139" alt="Google Play">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-7 col-xxl-8">
-              <img src="assets/img/landing/app-showcase-2/devices.png" width="618" class="rellax d-block mx-auto" alt="Devices" data-rellax-percentage="0.5" data-rellax-speed="1" data-disable-parallax-down="lg">
-              <div class="d-none d-xl-block" style="margin-bottom: -450px;"></div>
-              <div class="d-none d-lg-block d-xl-none" style="margin-bottom: -800px;"></div>
-              <div class="d-none d-sm-block d-lg-none" style="margin-bottom: -400px;"></div>
-              <div class="d-sm-none" style="margin-bottom: -240px;"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
 
 
 
@@ -768,7 +938,7 @@
           </div>
         </div>
         <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
-          <span class="text-light opacity-50">&copy; 2025 Debora Barbato. All rights reserved. Senior Content Designer & UX Writer - Website made with ♡ by <a href="https://florentin.us" class="text-light opacity-50 text-decoration-none">Florentin</a></span>
+          <span class="text-light opacity-50">&copy; 2025 Debora Barbato. All rights reserved. Senior Content Designer & UX Writer - Website made with </span><span class="animated-heart">♡</span><span class="text-light opacity-50"> by </span><a href="https://florentin.us" class="animated-gradient-link">Florentin</a>
         </p>
       </div>
     </footer>
