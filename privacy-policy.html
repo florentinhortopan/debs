@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Privacy Policy | Debora Barbato - Content Designer & UX Writer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Privacy Policy for Debora Barbato's website. Learn about how we collect, use, and protect your personal information on debs.ink.">
+    <meta name="keywords" content="privacy policy, data protection, personal information, debs.ink, Debora Barbato, content designer, UX writer">
+    <meta name="author" content="Debora Barbato">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon-dark-bg.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-dark-bg.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-logo {
+        display: inline-block;
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+        background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56"%3E%3Cdefs%3E%3ClinearGradient id="logo-gradient" x1="0%25" y1="0%25" x2="100%25" y2="100%25"%3E%3Cstop offset="0%25" style="stop-color:%236366f1;stop-opacity:1" /%3E%3Cstop offset="100%25" style="stop-color:%23a855f7;stop-opacity:1" /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill="url(%23logo-gradient)" d="M28 0C12.536 0 0 12.536 0 28s12.536 28 28 28 28-12.536 28-28S43.464 0 28 0zm0 50c-12.131 0-22-9.869-22-22S15.869 6 28 6s22 9.869 22 22-9.869 22-22 22z"/%3E%3Cpath fill="url(%23logo-gradient)" d="M28 14c-7.732 0-14 6.268-14 14s6.268 14 14 14 14-6.268 14-14-6.268-14-14-14zm0 24c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10z"/%3E%3C/svg%3E');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .page-loading-spinner {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e7e9fc;
+        border-top-color: #6366f1;
+        border-radius: 50%;
+        -webkit-animation: spinner 1s linear infinite;
+        animation: spinner 1s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0%   { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Animated gradient styles for footer */
+      .animated-gradient-link {
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none !important;
+        animation: gradient-shift 6s ease-in-out infinite;
+        transition: all 0.3s ease;
+        font-weight: 700 !important;
+        opacity: 1 !important;
+        color: transparent !important;
+      }
+      
+      .animated-gradient-link:hover {
+        animation-duration: 1s;
+        transform: scale(1.1);
+        text-decoration: none !important;
+        opacity: 1 !important;
+      }
+      
+      .animated-heart {
+        background: linear-gradient(45deg, #ff6b6b, #ff9ff3, #54a0ff, #4ecdc4);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-shift 2s ease-in-out infinite;
+        display: inline-block;
+        transition: all 0.3s ease;
+        opacity: 1 !important;
+        font-size: 1.2em;
+      }
+      
+      .animated-heart:hover {
+        animation-duration: 0.5s;
+        transform: scale(1.3);
+        opacity: 1 !important;
+      }
+      
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 500);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-loading-logo"></div>
+        <div class="page-loading-spinner"></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header navbar navbar-expand-lg navbar-light navbar-sticky" data-scroll-header data-fixed-element>
+      <div class="container px-3 px-xl-4">
+        <a href="index.html" class="navbar-brand pe-4">
+          <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
+          Debs.ink
+        </a>
+
+        <!-- Mobile menu button -->
+        <button type="button" class="navbar-toggler me-2" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Main navigation -->
+        <div class="offcanvas offcanvas-collapse" id="primaryMenu">
+          <div class="offcanvas-header navbar-shadow-sm align-items-center">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Menu -->
+            <ul class="navbar-nav navbar-nav-scroll">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="all-posts.html" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Impact</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main">
+      <!-- Hero section -->
+      <section class="container pt-5 mt-2 mt-md-3 mt-lg-4">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h1 class="h2 mb-4">Privacy Policy</h1>
+            <p class="fs-lg text-muted mb-0">Last updated: January 2025</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content section -->
+      <section class="container py-5 my-2 my-md-4 my-lg-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4 p-md-5">
+                <h2 class="h4 mb-4">1. Information We Collect</h2>
+                <p class="mb-4">We collect information you provide directly to us, such as when you:</p>
+                <ul class="mb-4">
+                  <li>Contact us through our website contact form</li>
+                  <li>Subscribe to our newsletter (if available)</li>
+                  <li>Send us an email</li>
+                  <li>Download resources from our website</li>
+                </ul>
+                <p class="mb-4">The types of information we may collect include your name, email address, phone number, and any other information you choose to provide.</p>
+
+                <h2 class="h4 mb-4">2. How We Use Your Information</h2>
+                <p class="mb-4">We use the information we collect to:</p>
+                <ul class="mb-4">
+                  <li>Respond to your inquiries and provide customer support</li>
+                  <li>Send you information about our services and content</li>
+                  <li>Improve our website and user experience</li>
+                  <li>Comply with legal obligations</li>
+                </ul>
+
+                <h2 class="h4 mb-4">3. Information Sharing and Disclosure</h2>
+                <p class="mb-4">We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this privacy policy. We may share your information in the following circumstances:</p>
+                <ul class="mb-4">
+                  <li>With your explicit consent</li>
+                  <li>To comply with legal obligations</li>
+                  <li>To protect our rights and prevent fraud</li>
+                  <li>In connection with a business transfer or merger</li>
+                </ul>
+
+                <h2 class="h4 mb-4">4. Data Security</h2>
+                <p class="mb-4">We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+
+                <h2 class="h4 mb-4">5. Cookies and Tracking Technologies</h2>
+                <p class="mb-4">Our website may use cookies and similar tracking technologies to enhance your browsing experience. Cookies are small data files stored on your device that help us:</p>
+                <ul class="mb-4">
+                  <li>Remember your preferences</li>
+                  <li>Analyze website traffic and usage patterns</li>
+                  <li>Improve website functionality</li>
+                </ul>
+                <p class="mb-4">You can control cookie settings through your browser preferences.</p>
+
+                <h2 class="h4 mb-4">6. Third-Party Services</h2>
+                <p class="mb-4">Our website may contain links to third-party websites or services. We are not responsible for the privacy practices or content of these third parties. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+                <h2 class="h4 mb-4">7. Data Retention</h2>
+                <p class="mb-4">We retain your personal information for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required or permitted by law.</p>
+
+                <h2 class="h4 mb-4">8. Your Rights</h2>
+                <p class="mb-4">Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                <ul class="mb-4">
+                  <li>The right to access your personal information</li>
+                  <li>The right to correct inaccurate information</li>
+                  <li>The right to delete your personal information</li>
+                  <li>The right to restrict processing of your information</li>
+                  <li>The right to data portability</li>
+                  <li>The right to object to processing</li>
+                </ul>
+
+                <h2 class="h4 mb-4">9. Children's Privacy</h2>
+                <p class="mb-4">Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+
+                <h2 class="h4 mb-4">10. Changes to This Privacy Policy</h2>
+                <p class="mb-4">We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last updated" date.</p>
+
+                <h2 class="h4 mb-4">11. Contact Us</h2>
+                <p class="mb-0">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:de.barbatosf@gmail.com">de.barbatosf@gmail.com</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Divider -->
+      <div class="container mb-md-2 mb-lg-4"><hr></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/feather-logo-white.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
+              Debs.ink
+            </div>
+            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>
+          </div>
+          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                </h6>
+                <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                    <li class="nav-item"><a href="all-posts.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li>
+                    <li class="nav-item"><a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Impact</a></li>
+                    <li class="nav-item"><a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
+                  </ul>
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="terms-and-conditions.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                    <li class="nav-item"><a href="privacy-policy.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                </h6>
+                <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="https://www.linkedin.com/in/debora-barbato-81b2113b" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                    <li class="nav-item"><a href="http://debcontent.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Portfolio</a></li>
+                    <li class="nav-item"><a href="mailto:de.barbatosf@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Email</a></li>
+                    <li class="nav-item"><a href="assets/resume/Debora-Barbato_Resume-Sept_2025.pdf" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank" rel="noopener">Resume</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contact Deb</h6>
+                <a href="mailto:de.barbatosf@gmail.com" class="fw-medium">de.barbatosf@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+          <span class="text-light opacity-50">&copy; 2025 Debora Barbato. All rights reserved. Senior Content Designer & UX Writer - Website made with </span><span class="animated-heart">♡</span><span class="text-light opacity-50"> by </span><a href="https://florentin.us" class="animated-gradient-link">Florentin</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
