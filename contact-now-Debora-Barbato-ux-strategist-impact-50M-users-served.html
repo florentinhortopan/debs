@@ -167,16 +167,101 @@
         }
       }
 
-      /* Fix mobile offcanvas menu visibility */
-      .offcanvas {
-        z-index: 1050 !important;
+      /* Custom Mobile Menu Styles */
+      .custom-mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        max-width: 85%;
+        height: 100vh;
+        background: white;
+        z-index: 9999;
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
       }
-      .offcanvas-backdrop {
-        z-index: 1040 !important;
+      .custom-mobile-menu.active {
+        right: 0;
       }
-      .navbar-toggler {
-        z-index: 1030 !important;
-        position: relative;
+      .custom-mobile-menu-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      }
+      .custom-mobile-menu-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .mobile-menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .mobile-menu-header h5 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #000;
+      }
+      .mobile-menu-close {
+        background: none;
+        border: none;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #666;
+        font-size: 24px;
+      }
+      .mobile-menu-close:hover {
+        color: #000;
+      }
+      .mobile-menu-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem 0;
+      }
+      .mobile-menu-link {
+        display: flex;
+        align-items: center;
+        padding: 0.875rem 1.5rem;
+        color: #333;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.2s ease;
+      }
+      .mobile-menu-link:hover {
+        background-color: #f5f5f5;
+        color: #000;
+      }
+      .mobile-menu-link.active {
+        background-color: #f0f0f0;
+        color: #000;
+        font-weight: 500;
+      }
+      .mobile-menu-link i {
+        font-size: 1.25rem;
+      }
+      .mobile-menu-footer {
+        padding: 1.5rem;
+        border-top: 1px solid #e5e5e5;
+      }
+      .mobile-menu-footer .btn {
+        border-radius: 0.5rem;
       }
     </style>
 
@@ -191,6 +276,47 @@
           }, 1000);
         };
       })();
+    </script>
+
+    <!-- Custom Mobile Menu Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('customMobileMenu');
+        const backdrop = document.getElementById('customMobileMenuBackdrop');
+        const toggleBtn = document.getElementById('mobileMenuToggle');
+        const closeBtn = document.getElementById('mobileMenuClose');
+
+        function openMenu() {
+          mobileMenu.classList.add('active');
+          backdrop.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+          mobileMenu.classList.remove('active');
+          backdrop.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        if (toggleBtn) {
+          toggleBtn.addEventListener('click', openMenu);
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMenu);
+        }
+
+        if (backdrop) {
+          backdrop.addEventListener('click', closeMenu);
+        }
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMenu();
+          }
+        });
+      });
     </script>
 
   </head>
@@ -214,61 +340,78 @@
 
 
       <!-- Navbar -->
-      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
       <header class="header navbar navbar-expand-lg position-absolute navbar-sticky" style="z-index: 1030;">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
             <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
             Debs.ink
           </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link playful-icon">
-                    <i class="bx bx-rocket me-1"></i>
-                    My Work
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="nav-link playful-icon">
-                    <i class="bx bx-smile me-1"></i>
-                    About Me
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="all-posts.html" class="nav-link playful-icon">
-                    <i class="bx bx-book-reader me-1"></i>
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="offcanvas-header border-top">
-                              <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-primary w-100">
-                <i class="bx bx-envelope fs-4 lh-1 me-1"></i>
-                &nbsp;Contact Debs
+          
+          <!-- Desktop Navigation -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+            <li class="nav-item">
+              <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link playful-icon">
+                <i class="bx bx-rocket me-1"></i>
+                My Work
               </a>
-            </div>      
-          </div>
-          <!-- Theme switcher - COMMENTED OUT TO LOCK IN LIGHT MODE -->
-          <!-- <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-            <input type="checkbox" class="form-check-input" id="theme-mode">Light</label>
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-          </div> -->
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            </li>
+            <li class="nav-item">
+              <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="nav-link playful-icon">
+                <i class="bx bx-smile me-1"></i>
+                About Me
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="all-posts.html" class="nav-link playful-icon">
+                <i class="bx bx-book-reader me-1"></i>
+                Blog
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle -->
+          <button type="button" class="navbar-toggler d-lg-none" id="mobileMenuToggle" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-                          <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+          
+          <!-- Desktop CTA Button -->
+          <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
             <i class="bx bx-envelope fs-5 lh-1 me-1"></i>
             &nbsp;Contact Debs
           </a>
         </div>
       </header>
+
+      <!-- Custom Mobile Menu -->
+      <div id="customMobileMenu" class="custom-mobile-menu">
+        <div class="mobile-menu-header">
+          <h5>Menu</h5>
+          <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+            <i class="bx bx-x"></i>
+          </button>
+        </div>
+        <nav class="mobile-menu-body">
+          <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="mobile-menu-link">
+            <i class="bx bx-rocket me-2"></i>
+            My Work
+          </a>
+          <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="mobile-menu-link">
+            <i class="bx bx-smile me-2"></i>
+            About Me
+          </a>
+          <a href="all-posts.html" class="mobile-menu-link">
+            <i class="bx bx-book-reader me-2"></i>
+            Blog
+          </a>
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-primary w-100">
+            <i class="bx bx-envelope me-2"></i>
+            Contact Debs
+          </a>
+        </div>
+      </div>
+      <div id="customMobileMenuBackdrop" class="custom-mobile-menu-backdrop"></div>
 
 
       <!-- Links + Contact form -->
