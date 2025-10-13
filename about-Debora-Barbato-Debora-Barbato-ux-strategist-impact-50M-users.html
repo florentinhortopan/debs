@@ -169,6 +169,28 @@
           background-position: 0% 50%;
         }
       }
+
+      /* Disable hover animations on testimonials */
+      .swiper-slide .card {
+        transition: none !important;
+        transform: none !important;
+      }
+      .swiper-slide .card:hover {
+        transform: none !important;
+        box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15) !important;
+      }
+
+      /* Fix mobile offcanvas menu visibility */
+      .offcanvas {
+        z-index: 1050 !important;
+      }
+      .offcanvas-backdrop {
+        z-index: 1040 !important;
+      }
+      .navbar-toggler {
+        z-index: 1030 !important;
+        position: relative;
+      }
     </style>
 
     <!-- Page loading scripts -->
@@ -206,7 +228,7 @@
 
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky" style="z-index: 1030;">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
             <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
@@ -235,12 +257,6 @@
                   <a href="all-posts.html" class="nav-link playful-icon">
                     <i class="bx bx-book-reader me-1"></i>
                     Blog
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link playful-icon">
-                    <i class="bx bx-conversation me-1"></i>
-                    Say Hi!
                   </a>
                 </li>
               </ul>
@@ -294,34 +310,31 @@
               </nav>
 
               <!-- Text -->
-              <h1 class="pb-2 pb-md-3">About Debora Barbato</h1>
-              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">Debs is a Senior Content Designer with 10+ years of digital design experience including 6 years in the financial sector. She specializes in mobile-first content strategy, cross-functional collaboration, and data-driven optimization. Debs is adept at crafting inclusive microcopy and scalable content systems that simplify complex product experiences while ensuring a consistent and authentic brand voice.</p>
+              <h1 class="pb-2 pb-md-3">About Me</h1>
+              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">I'm a <strong>Senior Content Designer</strong> known for three things: exceptional collaboration with designers, PMs, researchers, and engineers; data-informed information architecture that simplifies complex products and drives measurable results; and peer training and mentorship that empowers teams and scales best practices.</p>
+              <p class="fs-lg pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">I believe the best content design happens when strategy, data, and people all come together — and I love creating systems that make this possible.</p>
               <div class="row row-cols-3 pt-4 pt-md-5 mt-2 mt-xl-4">
                 <div class="col">
-                  <h3 class="h2 mb-2">10+</h3>
-                  <p class="mb-0"><strong>Years</strong> of Experience</p>
+                  <h3 class="h2 mb-2">90K</h3>
+                  <p class="mb-0"><strong>Fewer Calls</strong> per Month</p>
                 </div>
                 <div class="col">
-                  <h3 class="h2 mb-2">6</h3>
-                  <p class="mb-0"><strong>Years</strong> in Financial Sector</p>
+                  <h3 class="h2 mb-2">124%</h3>
+                  <p class="mb-0"><strong>Feature Engagement</strong> Increase</p>
                 </div>
                 <div class="col">
-                  <h3 class="h2 mb-2">35%</h3>
-                  <p class="mb-0"><strong>Call Volume</strong> Reduction</p>
+                  <h3 class="h2 mb-2">30+</h3>
+                  <p class="mb-0"><strong>Content Designers</strong> Mentored</p>
                 </div>
               </div>
             </div>
 
             <!-- Images -->
             <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
-              <div class="row row-cols-2 gx-3 gx-lg-4">
+              <div class="row gx-3 gx-lg-4">
                 <div class="col pt-lg-5 mt-lg-1">
                   <img src="assets/img/about/hero/01.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
                   <img src="assets/img/about/hero/02.jpg" class="d-block rounded-3" alt="Image">
-                </div>
-                <div class="col">
-                  <img src="assets/img/about/hero/03.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
-                  <img src="assets/img/about/hero/04.jpg" class="d-block rounded-3" alt="Image">
                 </div>
               </div>
             </div>
@@ -352,27 +365,27 @@
             <!-- Item -->
             <div class="swiper-slide border-end-lg px-2">
               <div class="text-center">
-                <img src="assets/img/landing/digital-agency/icons/idea.svg" width="48" alt="Content Strategy icon" class="d-block mb-4 mx-auto">
-                <h4 class="mb-2 pb-1">Content Strategy</h4>
-                <p class="mx-auto" style="max-width: 336px;">Mobile-first content strategy and scalable content systems that simplify complex product experiences.</p>
+                <img src="assets/img/landing/digital-agency/icons/team.svg" width="48" alt="Exceptional Collaboration icon" class="d-block mb-4 mx-auto">
+                <h4 class="mb-2 pb-1">Exceptional Collaboration</h4>
+                <p class="mx-auto" style="max-width: 336px;">Expert at working with designers, PMs, researchers, and engineers to create seamless cross-functional workflows.</p>
               </div>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide border-end-lg px-2">
               <div class="text-center">
-                <img src="assets/img/landing/digital-agency/icons/award.svg" width="48" alt="Information Architecture icon" class="d-block mb-4 mx-auto">
-                <h4 class="mb-2 pb-1">Information Architecture</h4>
-                <p class="mx-auto" style="max-width: 336px;">Led IA redesigns that reduced call volume by 35% and saved $3M annually while improving user engagement.</p>
+                <img src="assets/img/landing/digital-agency/icons/award.svg" width="48" alt="Data-informed IA icon" class="d-block mb-4 mx-auto">
+                <h4 class="mb-2 pb-1">Data-Informed IA</h4>
+                <p class="mx-auto" style="max-width: 336px;">Cut Chase support calls by 90,000/month, saved $3M annually, and boosted feature engagement by 124%.</p>
               </div>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide px-2">
               <div class="text-center">
-                <img src="assets/img/landing/digital-agency/icons/team.svg" width="48" alt="Cross-functional Collaboration icon" class="d-block mb-4 mx-auto">
-                <h4 class="mb-2 pb-1">Cross-functional Collaboration</h4>
-                <p class="mx-auto" style="max-width: 336px;">Expert at working with Design System, UX researchers, and cross-product teams to establish efficient workflows.</p>
+                <img src="assets/img/landing/digital-agency/icons/idea.svg" width="48" alt="Peer Training icon" class="d-block mb-4 mx-auto">
+                <h4 class="mb-2 pb-1">Peer Training & Mentorship</h4>
+                <p class="mx-auto" style="max-width: 336px;">Mentored 30+ content designers, improving team delivery speed by 30%. Experienced in IA, UX writing, testing, and design systems.</p>
               </div>
             </div>
           </div>
@@ -384,6 +397,7 @@
 
 
       <!-- Video showreel -->
+      <!-- COMMENTED OUT - Video Section Hidden
       <section class="container text-center pb-5 mt-n2 mt-md-0 mb-md-2 mb-lg-4">
         <div class="position-relative rounded-3 overflow-hidden">
           <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
@@ -395,6 +409,7 @@
           <img src="assets/img/landing/digital-agency/cover.jpg" class="d-block w-100" alt="Cover image">
         </div>
       </section>
+      -->
 
 
       <!-- Experience -->
@@ -443,14 +458,77 @@
       </section>
       
 
+      <!-- Personal Life -->
+      <section class="container mb-5 pb-3 pb-md-4 pb-lg-5">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h2 class="h1 mb-4">Beyond Work</h2>
+            <p class="fs-lg mb-4">Outside of work, you'll usually find me hanging out with my kids, hiking and exploring the outdoors, or baking bread.</p>
+            <div class="alert alert-info d-flex align-items-center">
+              <i class="bx bx-info-circle fs-4 me-2"></i>
+              <p class="mb-0"><strong>Fun fact:</strong> I'm Italian... but I don't love pasta (I know — shocking!).</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row row-cols-1 g-3">
+              <div class="col">
+                <div class="card border-0 bg-secondary">
+                  <div class="card-body p-4">
+                    <div class="d-flex align-items-start">
+                      <div class="d-inline-flex bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                        <i class="bx bx-group text-primary fs-4"></i>
+                      </div>
+                      <div>
+                        <h4 class="h6 mb-2">Family Time</h4>
+                        <p class="mb-0 text-muted">Spending quality moments with my kids</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 bg-secondary">
+                  <div class="card-body p-4">
+                    <div class="d-flex align-items-start">
+                      <div class="d-inline-flex bg-success bg-opacity-10 rounded-circle p-3 me-3">
+                        <i class="bx bx-walk text-success fs-4"></i>
+                      </div>
+                      <div>
+                        <h4 class="h6 mb-2">Outdoor Adventures</h4>
+                        <p class="mb-0 text-muted">Hiking and exploring nature</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 bg-secondary">
+                  <div class="card-body p-4">
+                    <div class="d-flex align-items-start">
+                      <div class="d-inline-flex bg-warning bg-opacity-10 rounded-circle p-3 me-3">
+                        <i class="bx bx-cookie text-warning fs-4"></i>
+                      </div>
+                      <div>
+                        <h4 class="h6 mb-2">Baking Bread</h4>
+                        <p class="mb-0 text-muted">Creating homemade artisan loaves</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Testimonials -->
-      <section class="container">
+      <section class="container pb-5 mb-5">
         <div class="row">
           <div class="col-md-5">
             <div class="card h-100 border-0 overflow-hidden px-md-4">
               <span class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
               <div class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
-                <h2 class="h1 text-center text-md-start p-lg-4">What Colleagues Say About Debora's Work</h2>
+                <h2 class="h1 text-center text-md-start p-lg-4">What Colleagues Say</h2>
               </div>
             </div>
           </div>
@@ -489,13 +567,13 @@
                   <div class="swiper-slide h-auto">
                     <figure class="card h-100 position-relative border-0 bg-transparent">
                       <blockquote class="card-body p-0 mb-0">
-                        <p class="fs-lg mb-0">Debora's information architecture redesign of our mobile customer support experience was transformative. The 35% reduction in call volume and $3M annual savings speak to her ability to translate user insights into impactful business solutions. Her collaborative approach with cross-functional teams made the entire process seamless.</p>
+                        <p class="fs-lg mb-0">Debora is diligent, a great collaborator, and takes time to understand problems before finding smart solutions. She does all of this with an engaging personality and remarkably even-keeled presence. Without a doubt, Deb is someone you want leading your content design team.</p>
                       </blockquote>
                       <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                        <img src="assets/img/avatar/14.jpg" width="60" class="rounded-circle" alt="Product Manager">
+                        <img src="assets/img/avatar/14.jpg" width="60" class="rounded-circle" alt="Samuel Barrett">
                         <div class="ps-3">
-                          <h6 class="fw-semibold lh-base mb-0">Product Manager</h6>
-                          <span class="fs-sm text-muted">J.P. Morgan Chase</span>
+                          <h6 class="fw-semibold lh-base mb-0">Samuel Barrett</h6>
+                          <span class="fs-sm text-muted">VP Content Design @ J.P. Morgan Chase</span>
                         </div>
                       </figcaption>
                     </figure>
@@ -505,29 +583,13 @@
                   <div class="swiper-slide h-auto">
                     <figure class="card h-100 position-relative border-0 bg-transparent">
                       <blockquote class="card-body p-0 mb-0">
-                        <p class="fs-lg mb-0">Debora's expertise in AI/ML content design was invaluable for our Yahoo Italia news feeds. Her ability to craft clear, jargon-free language for 5M+ daily users while reducing user confusion by 40% demonstrates her deep understanding of user experience and content strategy. She consistently delivered high-quality work with 99.5% accuracy.</p>
+                        <p class="fs-lg mb-0">Debora brings editorial rigor and collegial positivity every day. She's deeply reflective, strategic, and deliberate in her content decisions, readily able to talk through the 'why' behind her work. As a senior team member, she was a generous mentor whose positive presence calms and reassures those around her while building sincere professional relationships.</p>
                       </blockquote>
                       <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                        <img src="assets/img/avatar/13.jpg" width="60" class="rounded-circle" alt="UX Researcher">
+                        <img src="assets/img/avatar/15.jpg" width="60" class="rounded-circle" alt="Dexter Zavalza">
                         <div class="ps-3">
-                          <h6 class="fw-semibold lh-base mb-0">UX Researcher</h6>
-                          <span class="fs-sm text-muted">Yahoo Inc.</span>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <!-- Item -->
-                  <div class="swiper-slide h-auto">
-                    <figure class="card h-100 position-relative border-0 bg-transparent">
-                      <blockquote class="card-body p-0 mb-0">
-                        <p class="fs-lg mb-0">Debora's work on our AllTrails content design significantly improved the user experience for our 50M+ outdoor enthusiasts. Her attention to data quality and information architecture optimization reduced cognitive load by 40%. She has an exceptional ability to translate complex technical requirements into user-friendly content.</p>
-                      </blockquote>
-                      <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                        <img src="assets/img/avatar/11.jpg" width="60" class="rounded-circle" alt="Engineering Lead">
-                        <div class="ps-3">
-                          <h6 class="fw-semibold lh-base mb-0">Engineering Lead</h6>
-                          <span class="fs-sm text-muted">AllTrails Inc.</span>
+                          <h6 class="fw-semibold lh-base mb-0">Dexter Zavalza</h6>
+                          <span class="fs-sm text-muted">AI & Data Servicing Leader</span>
                         </div>
                       </figcaption>
                     </figure>
@@ -543,27 +605,6 @@
       </section>
 
 
-
-
-
-
-      <!-- Contact CTA -->
-      <section class="container mt-n2">
-        <div class="card border-0 bg-gradient-primary">
-          <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(assets/img/landing/digital-agency/contact-bg.png);">
-            <div class="py-md-5 py-4 text-center">
-              <h3 class="h4 fw-normal text-light opacity-75">Want to work with us? Let’s talk</h3>
-              <a href="mailto:de.barbatosf@gmail.com" class="display-6 text-light">de.barbatosf@gmail.com</a>
-              <div class="pt-md-5 pt-4 pb-md-2">
-                <a href="contacts-v1.html" class="btn btn-lg btn-light">Get in Touch</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
     </main>
 
 
@@ -573,7 +614,7 @@
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/feather-logo-white.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
+              <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
               Debs.ink
             </div>
             <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>

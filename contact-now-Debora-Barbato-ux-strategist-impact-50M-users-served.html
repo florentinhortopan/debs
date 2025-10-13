@@ -166,6 +166,18 @@
           background-position: 0% 50%;
         }
       }
+
+      /* Fix mobile offcanvas menu visibility */
+      .offcanvas {
+        z-index: 1050 !important;
+      }
+      .offcanvas-backdrop {
+        z-index: 1040 !important;
+      }
+      .navbar-toggler {
+        z-index: 1030 !important;
+        position: relative;
+      }
     </style>
 
     <!-- Page loading scripts -->
@@ -203,7 +215,7 @@
 
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky" style="z-index: 1030;">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
             <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
@@ -232,12 +244,6 @@
                   <a href="all-posts.html" class="nav-link playful-icon">
                     <i class="bx bx-book-reader me-1"></i>
                     Blog
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link playful-icon active" aria-current="page">
-                    <i class="bx bx-conversation me-1"></i>
-                    Say Hi!
                   </a>
                 </li>
               </ul>
@@ -343,7 +349,7 @@
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/feather-logo-white.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
+              <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
               Debs.ink
             </div>
             <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Senior Content Designer with 10+ years of digital design experience, specializing in mobile-first content strategy, UX writing, and data-driven optimization. Expert in crafting inclusive microcopy and scalable content systems that simplify complex product experiences.</p>

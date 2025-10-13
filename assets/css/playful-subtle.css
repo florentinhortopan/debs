@@ -1,0 +1,434 @@
+/* ============================================
+   DEBORA'S SUBTLE PLAYFUL DESIGN SYSTEM 🎨
+   Professional yet warm - perfect for content-focused pages
+   ============================================ */
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Caveat:wght@400;500;600;700&family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+/* ============================================
+   COLOR PALETTE - Subtle & Professional
+   ============================================ */
+:root {
+  /* Primary colors - more muted */
+  --subtle-purple: #9F7AEA;
+  --subtle-pink: #ED64A6;
+  --subtle-orange: #F6AD55;
+  --subtle-teal: #4FD1C5;
+  
+  /* Very soft backgrounds */
+  --bg-soft-purple: #FAF5FF;
+  --bg-soft-pink: #FFF5F7;
+  --bg-soft-orange: #FFFAF0;
+  --bg-soft-teal: #E6FFFA;
+  
+  /* Neutrals */
+  --warm-white: #FFFBF5;
+  --warm-gray: #78716C;
+  --warm-dark: #44403C;
+  
+  /* Subtle gradients */
+  --gradient-subtle: linear-gradient(135deg, #FAF5FF 0%, #FFF5F7 50%, #FFFAF0 100%);
+  --gradient-accent: linear-gradient(135deg, #9F7AEA 0%, #ED64A6 100%);
+}
+
+/* ============================================
+   TYPOGRAPHY - Clear & Readable
+   ============================================ */
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  background-color: var(--warm-white);
+  color: var(--warm-dark);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka', 'DM Sans', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--warm-dark);
+  line-height: 1.3;
+}
+
+/* Subtle handwritten accents - used sparingly */
+.handwritten, .playful-accent {
+  font-family: 'Caveat', cursive !important;
+  font-weight: 600;
+  color: var(--subtle-purple);
+  font-size: 1.2em;
+}
+
+/* ============================================
+   ROUNDED CORNERS - Gentle & Modern
+   ============================================ */
+.btn, .card, .badge, .navbar, .form-control, .form-select,
+.offcanvas, .modal-content, .dropdown-menu, .alert {
+  border-radius: 1rem !important;
+}
+
+img, .jarallax-img, video {
+  border-radius: 1rem !important;
+}
+
+/* ============================================
+   BUTTONS - Subtle Playfulness
+   ============================================ */
+.btn-primary {
+  background: var(--subtle-purple) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(159, 122, 234, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 600 !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(159, 122, 234, 0.3);
+  background: var(--subtle-pink) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--subtle-teal) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(79, 209, 197, 0.2);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 209, 197, 0.3);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--subtle-purple) !important;
+  color: var(--subtle-purple) !important;
+  background: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--subtle-purple) !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   NAVIGATION - Clean & Friendly
+   ============================================ */
+.navbar {
+  background: rgba(255, 251, 245, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--bg-soft-purple);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: 'Fredoka', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.4rem !important;
+  color: var(--subtle-purple) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--subtle-pink) !important;
+}
+
+.nav-link {
+  font-weight: 500 !important;
+  color: var(--warm-dark) !important;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--subtle-purple);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--subtle-purple) !important;
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+/* ============================================
+   CARDS - Clean with Subtle Hover
+   ============================================ */
+.card {
+  border: 1px solid #E5E7EB;
+  background: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(159, 122, 234, 0.15);
+  border-color: var(--subtle-purple);
+}
+
+/* ============================================
+   BADGES - Soft & Clear
+   ============================================ */
+.badge {
+  font-weight: 600 !important;
+  padding: 0.4em 0.9em !important;
+  font-size: 0.85rem !important;
+}
+
+.badge-playful {
+  background: var(--subtle-purple) !important;
+  color: white;
+}
+
+/* ============================================
+   BACKGROUNDS - Soft & Warm
+   ============================================ */
+.bg-playful-gradient {
+  background: var(--gradient-subtle) !important;
+}
+
+.bg-warm {
+  background: var(--warm-white) !important;
+}
+
+.section-playful {
+  background: var(--bg-soft-purple);
+}
+
+/* ============================================
+   HERO SECTION - Professional & Welcoming
+   ============================================ */
+.hero-playful {
+  background: var(--gradient-subtle);
+  padding: 5rem 0;
+}
+
+.hero-playful h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--warm-dark);
+}
+
+/* ============================================
+   BLOG-SPECIFIC STYLES
+   ============================================ */
+
+/* Article headers */
+.article-header h1 {
+  color: var(--warm-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Article meta info */
+.article-meta {
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-soft-purple);
+}
+
+/* Article body text - optimized for reading */
+.article-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--warm-dark);
+}
+
+.article-body h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--subtle-purple);
+  font-size: 1.75rem;
+}
+
+.article-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--subtle-purple);
+  font-size: 1.35rem;
+}
+
+.article-body p {
+  margin-bottom: 1.5rem;
+}
+
+.article-body ul, .article-body ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+}
+
+.article-body blockquote {
+  border-left: 4px solid var(--subtle-purple);
+  background: var(--bg-soft-purple);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  font-style: italic;
+}
+
+.article-body code {
+  background: var(--bg-soft-orange);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.9em;
+  color: var(--subtle-orange);
+}
+
+.article-body pre {
+  background: var(--warm-dark);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+/* ============================================
+   PROJECT/WORK PAGE STYLES
+   ============================================ */
+
+/* Project showcase sections */
+.project-section {
+  margin-bottom: 4rem;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  font-size: 2.75rem;
+  color: var(--warm-dark);
+  margin-bottom: 1rem;
+}
+
+.project-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--warm-gray);
+  margin-top: 1rem;
+}
+
+.project-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Project highlights */
+.highlight-box {
+  background: var(--bg-soft-purple);
+  border-left: 4px solid var(--subtle-purple);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.highlight-box h3 {
+  color: var(--subtle-purple);
+  margin-bottom: 1rem;
+}
+
+/* Stats display */
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border: 1px solid var(--bg-soft-purple);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(159, 122, 234, 0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--subtle-purple);
+  font-family: 'Fredoka', sans-serif !important;
+}
+
+.stat-label {
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   FOOTER - Clean & Professional
+   ============================================ */
+footer {
+  background: var(--gradient-subtle);
+  border-top: 2px solid var(--subtle-purple);
+  padding: 3rem 0;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-subtle-purple {
+  color: var(--subtle-purple) !important;
+}
+
+.text-subtle-pink {
+  color: var(--subtle-pink) !important;
+}
+
+.shadow-subtle {
+  box-shadow: 0 10px 25px rgba(159, 122, 234, 0.15) !important;
+}
+
+.border-subtle {
+  border: 2px solid var(--subtle-purple) !important;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-playful h1 {
+    font-size: 2.25rem;
+  }
+  
+  .article-header h1 {
+    font-size: 2rem;
+  }
+  
+  .project-header h1 {
+    font-size: 2.25rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
