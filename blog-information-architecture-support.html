@@ -362,40 +362,32 @@
             <img src="assets/img/feather-logo.svg" width="47" alt="Debs.ink - Content Design & UX Writing">
             Debs.ink
           </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link playful-icon">
-                    <i class="bx bx-rocket me-1"></i>
-                    My Work
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="nav-link playful-icon">
-                    <i class="bx bx-smile me-1"></i>
-                    About Me
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="all-posts.html" class="nav-link playful-icon">
-                    <i class="bx bx-book-reader me-1"></i>
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="offcanvas-header border-top">
-              <a href="contacts-v1.html" class="btn btn-primary w-100">
-                <i class="bx bx-envelope fs-4 lh-1 me-1"></i>
-                &nbsp;Get in Touch
+          <!-- Desktop Navigation -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+            <li class="nav-item">
+              <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="nav-link playful-icon">
+                <i class="bx bx-rocket me-1"></i>
+                My Work
               </a>
-            </div>      
-          </div>
+            </li>
+            <li class="nav-item">
+              <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="nav-link playful-icon">
+                <i class="bx bx-smile me-1"></i>
+                About Me
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="all-posts.html" class="nav-link playful-icon">
+                <i class="bx bx-book-reader me-1"></i>
+                Blog
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu Toggle -->
+          <button type="button" class="navbar-toggler d-lg-none" id="mobileMenuToggle" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <!-- Theme switcher - COMMENTED OUT TO LOCK IN LIGHT MODE -->
           <!-- <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
@@ -411,6 +403,37 @@
           </a>
         </div>
       </header>
+      <!-- Custom Mobile Menu -->
+      <div id="customMobileMenu" class="custom-mobile-menu">
+        <div class="mobile-menu-header">
+          <h5>Menu</h5>
+          <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+            <i class="bx bx-x"></i>
+          </button>
+        </div>
+        <nav class="mobile-menu-body">
+          <a href="Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="mobile-menu-link">
+            <i class="bx bx-rocket me-2"></i>
+            My Work
+          </a>
+          <a href="about-Debora-Barbato-Debora-Barbato-ux-strategist-impact-50M-users.html" class="mobile-menu-link">
+            <i class="bx bx-smile me-2"></i>
+            About Me
+          </a>
+          <a href="all-posts.html" class="mobile-menu-link">
+            <i class="bx bx-book-reader me-2"></i>
+            Blog
+          </a>
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="contact-now-Debora-Barbato-ux-strategist-impact-50M-users-served.html" class="btn btn-primary w-100">
+            <i class="bx bx-envelope me-2"></i>
+            Let's Chat!
+          </a>
+        </div>
+      </div>
+      <div id="customMobileMenuBackdrop" class="custom-mobile-menu-backdrop"></div>
+
 
 
       <!-- Breadcrumb -->
