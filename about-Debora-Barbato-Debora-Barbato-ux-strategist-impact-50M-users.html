@@ -179,6 +179,32 @@
         transform: none !important;
         box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15) !important;
       }
+      
+      /* Make testimonial name links clickable and add hover effect */
+      .swiper-slide .card-footer h6 a,
+      .card-footer h6 a {
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        z-index: 100 !important;
+        position: relative !important;
+        transition: color 0.2s ease !important;
+        display: inline-block !important;
+      }
+      .swiper-slide .card-footer h6 a:hover,
+      .card-footer h6 a:hover {
+        color: #667eea !important;
+        text-decoration: underline !important;
+      }
+      
+      /* Prevent swiper from blocking link clicks */
+      .swiper-slide a {
+        pointer-events: auto !important;
+        z-index: 100 !important;
+      }
+      
+      .swiper-no-swiping {
+        cursor: pointer !important;
+      }
 
       /* Custom Mobile Menu Styles */
       .custom-mobile-menu {
@@ -694,6 +720,11 @@
               <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
                 "spaceBetween": 24,
                 "loop": true,
+                "allowTouchMove": true,
+                "preventClicks": false,
+                "preventClicksPropagation": false,
+                "noSwiping": false,
+                "noSwipingSelector": "a",
                 "pagination": {
                   "el": ".swiper-pagination",
                   "clickable": true
@@ -712,9 +743,9 @@
                         <p class="fs-lg mb-0">Debora is diligent, a great collaborator, and takes time to understand problems before finding smart solutions. She does all of this with an engaging personality and remarkably even-keeled presence. Without a doubt, Deb is someone you want leading your content design team.</p>
                       </blockquote>
                       <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                        <img src="assets/img/avatar/14.jpg" width="60" class="rounded-circle" alt="Samuel Barrett">
+                        <img src="assets/img/avatar/Sam.jpeg" width="60" class="rounded-circle" alt="Samuel Barrett">
                         <div class="ps-3">
-                          <h6 class="fw-semibold lh-base mb-0">Samuel Barrett</h6>
+                          <h6 class="fw-semibold lh-base mb-0"><a href="https://www.linkedin.com/in/samuel-barrett-b120724/" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none swiper-no-swiping">Samuel Barrett</a></h6>
                           <span class="fs-sm text-muted">VP Content Design @ J.P. Morgan Chase</span>
                         </div>
                       </figcaption>
@@ -728,9 +759,9 @@
                         <p class="fs-lg mb-0">Debora brings editorial rigor and collegial positivity every day. She's deeply reflective, strategic, and deliberate in her content decisions, readily able to talk through the 'why' behind her work. As a senior team member, she was a generous mentor whose positive presence calms and reassures those around her while building sincere professional relationships.</p>
                       </blockquote>
                       <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
-                        <img src="assets/img/avatar/15.jpg" width="60" class="rounded-circle" alt="Dexter Zavalza">
+                        <img src="assets/img/avatar/Dexter.jpeg" width="60" class="rounded-circle" alt="Dexter Zavalza">
                         <div class="ps-3">
-                          <h6 class="fw-semibold lh-base mb-0">Dexter Zavalza</h6>
+                          <h6 class="fw-semibold lh-base mb-0"><a href="https://www.linkedin.com/in/dzh-s/" target="_blank" rel="noopener noreferrer" class="text-dark text-decoration-none swiper-no-swiping">Dexter Zavalza</a></h6>
                           <span class="fs-sm text-muted">AI & Data Servicing Leader</span>
                         </div>
                       </figcaption>
@@ -776,7 +807,7 @@
             <div id="footer-links" class="row">
               <div class="col-lg-4">
                 <h6 class="mb-2">
-                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                  <a href="#useful-links" class="d-block text-body dropdown-toggle d-lg-none py-2" style="color: #333 !important; font-weight: 600;" data-bs-toggle="collapse">Useful Links</a>
                 </h6>
                 <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
                                     <ul class="nav flex-column pb-lg-1 mb-lg-3">
@@ -793,12 +824,12 @@
               </div>
               <div class="col-xl-4 col-lg-3">
                 <h6 class="mb-2">
-                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                  <a href="#social-links" class="d-block text-body dropdown-toggle d-lg-none py-2" style="color: #333 !important; font-weight: 600;" data-bs-toggle="collapse">Socials</a>
                 </h6>
                 <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
                   <ul class="nav flex-column mb-2 mb-lg-0">
                     <li class="nav-item"><a href="https://www.linkedin.com/in/debora-barbato-81b2113b" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
-                    <li class="nav-item"><a href="http://debcontent.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Portfolio</a></li>
+                    <li class="nav-item"><a href="https://marsh-pangolin-ec9.notion.site/Debora-Barbato-277d2a54efcb80b2ac68f5ca61ba2405" class="nav-link d-inline-block px-0 pt-1 pb-2">Portfolio - (Notion)</a></li>
                     <li class="nav-item"><a href="mailto:deborabarbatosf@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Email</a></li>
                     <li class="nav-item"><a href="assets/resume/Debora-Barbato_Resume-Sept_2025.pdf" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank" rel="noopener">Resume</a></li>
                   </ul>
